@@ -1,0 +1,288 @@
+<script>
+  window.addEventListener("load", () => {
+    let birthday = "2024,12,12";
+
+    (function () {
+      const second = 1000;
+      const minute = second * 60;
+      const hour = minute * 60;
+      const day = hour * 24;
+
+      const countDown = new Date(birthday).getTime();
+      x = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = countDown - now;
+
+        document.getElementById("days").innerText = setNumber(distance / day);
+
+        document.getElementById("hours").innerText = setNumber(
+          (distance % day) / hour
+        );
+        document.getElementById("minutes").innerText = setNumber(
+          (distance % hour) / minute
+        );
+        animateFlip(seconds, Math.floor((distance % minute) / second));
+
+        //do something later when date is reached
+        if (distance < 0) {
+          let headline = document.getElementById("headline"),
+            countdown = document.getElementById("countdown"),
+            content = document.getElementById("content");
+
+          headline.innerText = "It's my birthday!";
+          countdown.style.display = "none";
+          content.style.display = "block";
+
+          clearInterval(x);
+        }
+      }, 1000);
+    })();
+
+    function animateFlip(element, value) {
+      const valueInDom = element.querySelector(".bottom-back").innerText;
+      const currentValue = value < 10 ? "0" + value : "" + value;
+
+      if (valueInDom === currentValue) return;
+
+      element.querySelector(".top-back span").innerText = currentValue;
+      element.querySelector(".bottom-back span").innerText = currentValue;
+
+      gsap.to(element.querySelector(".top"), 0.7, {
+        rotationX: "-180deg",
+        transformPerspective: 300,
+        ease: Quart.easeOut,
+        onComplete: function () {
+          element.querySelector(".top").innerText = currentValue;
+          element.querySelector(".bottom").innerText = currentValue;
+          gsap.set(element.querySelector(".top"), { rotationX: 0 });
+        },
+      });
+
+      gsap.to(element.querySelector(".top-back"), 0.7, {
+        rotationX: 0,
+        transformPerspective: 300,
+        ease: Quart.easeOut,
+        clearProps: "all",
+      });
+    }
+
+    function setNumber(num) {
+      const res = Math.floor(num);
+      return res >= 10 ? res : `0${res}`;
+    }
+  });
+</script>
+<style>
+  @import url("https://fonts.cdnfonts.com/css/druk-trial");
+  @import "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css";
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .pink {
+    color: #d62c9d;
+  }
+  .green {
+    color: #5dd62c;
+  }
+  body {
+    font-family: "Druk Text Trial";
+    background: #0f0f0f;
+    color: white;
+  }
+
+  .time-elem {
+    position: relative;
+
+    height: 140px;
+    width: 150px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    font-size: 5.5em;
+    overflow: hidden;
+    box-shadow: 0px 8px 0px 0px #565656;
+  }
+
+  .time-elem::before,
+  .time-elem::after {
+    content: "";
+    position: absolute;
+    z-index: 6;
+    top: calc(50% - 5px);
+    background: #e9e9e9;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+
+  .time-elem::before {
+    left: -5px;
+  }
+
+  .time-elem::after {
+    right: -5px;
+  }
+
+  .time-elem > span {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .top {
+    z-index: 3;
+    background-color: #e9e9e9;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: perspective(200px);
+    transform: perspective(200px);
+  }
+
+  .time-elem .top::after,
+  .time-elem .bottom-back::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid #e9e9e9;
+  }
+
+  .bottom {
+    z-index: 1;
+  }
+
+  .bottom::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #e9e9e9;
+  }
+
+  .bottom-back {
+    z-index: 2;
+    top: 0;
+    height: 50%;
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+
+  .bottom-back span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .top,
+  .top-back {
+    height: 50%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .top-back {
+    z-index: 4;
+    bottom: 0;
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    background-color: #e9e9e9;
+    -webkit-transform: perspective(200px) rotateX(180deg);
+    transform: perspective(200px) rotateX(180deg);
+  }
+
+  .top-back span {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .footer {
+    background-image: url("./images/pattern-hills.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+</style>
+<div class="max-w-4xl h-screen mx-auto z-10">
+  <div class="mt-14 flex h-screen items-center justify-between">
+    <div class="flex items-center mr-7 flex-col flex-nowrap">
+      <span
+        class="time-elem relative green w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
+        id="days"
+      >
+        <span class="top">00</span>
+        <span class="top-back">
+          <span>00</span>
+        </span>
+        <span class="bottom">08</span>
+        <span class="bottom-back">
+          <span>00</span>
+        </span>
+      </span>
+      <span class="title">Days</span>
+    </div>
+
+    <div class="flex items-center mr-7 flex-col flex-nowrap">
+      <span
+        class="time-elem pink relative w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
+        id="hours"
+      >
+        <!-- <span class="top">00</span>
+          <span class="top-back">
+            <span>00</span>
+          </span>
+          <span class="bottom">08</span>
+          <span class="bottom-back">
+            <span>00</span>
+          </span> -->
+      </span>
+      <span class="title">Hours</span>
+    </div>
+
+    <div class="flex items-center mr-7 flex-col flex-nowrap">
+      <span
+        class="time-elem green relative w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
+        id="minutes"
+      >
+        <!-- <span class="top">00</span>
+          <span class="top-back">
+            <span>00</span>
+          </span>
+          <span class="bottom">08</span>
+          <span class="bottom-back">
+            <span>00</span>
+          </span> -->
+      </span>
+      <span class="title">Minutes</span>
+    </div>
+
+    <div class="flex items-center mr-7 flex-col flex-nowrap">
+      <span class="seconds pink time-elem mb-6 text-center" id="seconds">
+        <span class="top">00</span>
+        <span class="top-back">
+          <span>00</span>
+        </span>
+        <span class="bottom">00</span>
+        <span class="bottom-back">
+          <span>00</span>
+        </span>
+      </span>
+      <span class="title">Seconds</span>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>

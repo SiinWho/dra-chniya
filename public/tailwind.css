@@ -1,0 +1,9 @@
+@import url("https://fonts.cdnfonts.com/css/druk-trial");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Druk Text Trial";
+}
+

@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles/hero.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tailwind.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script>
+      setTimeout(function() {
+        var element = document.getElementById("loader");
+        element.classList.add("hidden");
+        element.classList.remove("flex");}, 4001);
+    </script>
+
+</head>
+<body class="bg-[#0F0F0F] h-screen">
+<div
+  id="loader"
+  class="bg-[#0F0F0F] flex min-h-screen justify-center items-center"
+>
+  <div id="loader-cube" class="bg-[#0F0F0F] scale-50" data-v-app="">
+    <main
+      data-v-8daa8809=""
+      class="h-screen flex items-center justify-center"
+    >
+      <div data-v-8daa8809="" id="home" class="wrapper1320">
+        <div
+          data-v-bbfd8b70=""
+          data-v-8daa8809=""
+          class="hero-loader"
+          style="margin-bottom: 0"
+        >
+          <div
+            data-v-bbfd8b70=""
+            class="row row-1 animated left"
+            style="
+              height: 35px;
+              margin-bottom: 100px;
+              width: 415px;
+
+              animation-duration: 2.5s;
+              animation-delay: 0;
+            "
+          >
+            <h1 data-v-bbfd8b70="" class="hero-loader"></h1>
+            <div data-v-bbfd8b70="" class="ruler">
+              <span data-v-bbfd8b70=""></span>
+            </div>
+            <h1 data-v-bbfd8b70="" class="hero-loader">&zwnj;</h1>
+          </div>
+          <div
+            data-v-bbfd8b70=""
+            class="row row-2 animated right"
+            style="
+              height: 35px;
+              margin-bottom: 100px;
+              width: 415px;
+              animation-duration: 2.5s;
+              animation-delay: 0;
+            "
+          >
+            <h1 data-v-bbfd8b70="" class="hero-loader"></h1>
+            <div data-v-bbfd8b70="" class="ruler">
+              <span data-v-bbfd8b70=""></span>
+            </div>
+            <h1 data-v-bbfd8b70="" class="hero-loader">&zwnj;</h1>
+          </div>
+          <div
+            data-v-bbfd8b70=""
+            class="row row-3 animated left"
+            style="
+              height: 100px;
+              margin-bottom: 100px;
+              width: 415px;
+              animation-duration: 2.5s;
+              animation-delay: 0;
+            "
+          >
+            <h1 data-v-bbfd8b70="" class="hero-loader"></h1>
+            <div data-v-bbfd8b70="" class="ruler">
+              <span data-v-bbfd8b70=""></span>
+            </div>
+            <h1 data-v-bbfd8b70="" class="hero-loader">&zwnj;</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+  <header class="bg-[#0F0F0F]">
+    <nav id="nav" class="text-xl flex justify-between items-center w-[95%] duration-500 mx-auto">
+      <div>
+        <img class="relative z-50 duration-500 p-3 w-20 cursor-pointer" id="logo-img" src="dx.png" alt="...">
+      </div>
+      <div
+        class="nav-links duration-500 md:static absolute bg-[#0F0F0F] md:min-h-fit min-h-[60vh] left-0 top-[-600%] md:w-auto  w-full flex items-center px-5">
+        <ul class="text-white flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+          <li>
+            <a href="#" class="relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+              HOME
+              </a>
+          </li>
+          <li>
+            <a href="#" class="relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+              AGENDA
+              </a>
+          </li>
+          <li>
+            <a href="#" class="relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+              SPEAKERS
+              </a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-6">
+        <div class="relative inline-flex max-md:scale-75  group">
+          <div
+        class="absolute   inset-0 duration-1000 scale-90 -mr-10 md:mr-0  opacity-60 transitiona-all bg-gradient-to-r from-[#D62C9D] via-[#E9E9E9] to-[#5DD62C] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200">
+    </div>
+    <a href="#" title="Sign Up"
+        class=" group relative inline-flex scale-90 -mr-10 md:mr-0   items-center bg-[#0F0F0F] justify-center rounded-xl bg[] px-8 py-3  text-white transition-all duration-200 hover:bg-[#0F0F0F] hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
+        role="button">SIGN UP
+    </a>
+      </div>
+      
+        <ion-icon onclick="onToggleMenu(this)" name="menu"
+          class="text-white text-3xl relative z-50 cursor-pointer md:hidden"></ion-icon>
+      </div>
+  </header>
+
+
+
+  <script>
+    const navLinks = document.querySelector('.nav-links')
+
+    function onToggleMenu(e) {
+      e.name = e.name === 'menu' ? 'close' : 'menu'
+      navLinks.classList.toggle('top-[8.5%]')
+      var nav=document.getElementById("nav")
+      nav.classList.toggle('w-[100%]')
+      
+      
+      
+    }
+  </script>
+
+  <div id="app" class="bg-[#0F0F0F] pt-2" data-v-app="">
+    <main data-v-8daa8809="">
+      <div data-v-8daa8809="" id="home" class="wrapper1320">
+        <div data-v-bbfd8b70="" data-v-8daa8809="" class="hero">
+          <div
+            data-v-bbfd8b70=""
+            class="row row-1 animated left"
+            style="
+              --h1-width: 323px;
+              width: calc(100% + 323px);
+              transform: translateX(0px);
+              animation-duration: 4.5s;
+              animation-delay: 0s;
+            "
+          >
+            <h1 data-v-bbfd8b70="" class="hero"><span style="font-family: 'Druk Text Trial';  font-weight: bold; line-height: 1;">INDUSTRY</span><span style="font-family: 'Druk Text Trial';font-style: italic; line-height: 1;">4.0</span></h1>
+            <div data-v-bbfd8b70="" class="ruler">
+              <span data-v-bbfd8b70=""></span>
+            </div>
+            <h1 data-v-bbfd8b70="" class="hero"></h1>
+          </div>
+          <div
+            data-v-bbfd8b70=""
+            class="row row-2 animated right"
+            style="
+              --h1-width: 358px;
+              width: calc(100% + 358px);
+              transform: translateX(-171px);
+              animation-duration: 4.5s;
+              animation-delay: 0.3s;
+            "
+          >
+            <h1 data-v-bbfd8b70="" class="hero"></h1>
+            <div data-v-bbfd8b70="" class="ruler">
+              <span data-v-bbfd8b70=""></span>
+            </div>
+            <h1 data-v-bbfd8b70="" class="hero"><span style="font-family:'Druk Text Trial'; font-weight: bold;font-style: italic; line-height: 1;">HACKATHON</span></h1>
+          </div>
+          <div
+            data-v-bbfd8b70=""
+            class="row row-3 animated left"
+            style="
+              --h1-width: 347px;
+              width: calc(100% + 347px);
+              transform: translateX(0px);
+              animation-duration: 4.5s;
+              animation-delay: 0.6s;
+            "
+          >
+            <h1 data-v-bbfd8b70="" class="hero"><span style="font-family:'Druk Wide Trial'; font-weight: bold; line-height: 1;">21-22</span> <span style="font-family:'Druk XCond Trial'; line-height: 1;">DECEMBER</span></h1>
+            <div data-v-bbfd8b70="" class="ruler">
+              <span data-v-bbfd8b70=""></span>
+            </div>
+            <h1 data-v-bbfd8b70="" class="hero"></h1>
+          </div>
+          <div
+            data-v-bbfd8b70=""
+            class="row row-4 animated left"
+            style="
+              --h1-width: 241px;
+              width: calc(100% + 241px);
+              transform: translateX(0px);
+              animation-duration: 4.5s;
+              animation-delay: 0.9s;
+            "
+          >
+            <h1 data-v-bbfd8b70="" class="hero"></h1>
+            <div data-v-bbfd8b70="" class="ruler">
+              <span data-v-bbfd8b70=""></span>
+            </div>
+            <h1 data-v-bbfd8b70="" class="hero"><span style="font-family:'Druk Text Wide Trial'; font-style: italic; line-height: 1;">2024</span></h1>
+            </h1>
+          </div>
+          <div
+            data-v-bbfd8b70=""
+            class="row row-5 animated right"
+            style="
+              --h1-width: 229px;
+              width: calc(100% + 229px);
+              transform: translateX(-109px);
+              animation-duration: 4.5s;
+              animation-delay: 1.2s;
+            "
+          >
+            <h1 data-v-bbfd8b70="" id="row5Heading" class="hero"></h1>
+            <div data-v-bbfd8b70="" class="ruler">
+              <span data-v-bbfd8b70=""></span>
+            </div>
+            <!-- Removed duplicate ID from second ZAGREB heading -->
+            <h1 data-v-bbfd8b70="" class="hero"><span style="font-family:'Druk Wide Trial'; font-style: italic; line-height: 1;">IIT</span></h1>
+            <h1 data-v-bbfd8b70="" id="row5Heading"  class="hero"></h1>
+            <div data-v-bbfd8b70="" class="ruler">
+              <span data-v-bbfd8b70="" ></span>
+            </div>
+            <!-- Removed duplicate ID from second ZAGREB heading -->
+            
+            
+
+          
+        </div>
+        <div
+            data-v-bbfd8b70=""
+            class="row row-6 animated right"
+            style="
+            --h1-width: 323px;
+            width: calc(100% + 323px);
+            transform: translateX(0px);
+            animation-duration: 4.5s;
+            animation-delay: 0s;
+          "
+          >
+          <h1 data-v-bbfd8b70="" class="hero"><span style="font-family:'Druk Text Wide Trial';font-weight: bold; line-height: 1;">SFAX</span></h1>
+          <div data-v-bbfd8b70="" class="ruler">
+            <span data-v-bbfd8b70=""></span>
+          </div>
+          <h1 data-v-bbfd8b70="" class="hero"></h1>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
