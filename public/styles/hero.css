@@ -5,6 +5,7 @@
 }
 *,
 html {
+  color: white;
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
@@ -20,13 +21,8 @@ html {
 
 .hero[data-v-bbfd8b70] {
   overflow: hidden;
-  margin-bottom: 170px;
 }
-@media (max-width: 1025px) {
-  .hero[data-v-bbfd8b70] {
-    margin-bottom: 60px;
-  }
-}
+
 .hero .row[data-v-bbfd8b70] {
   display: flex;
   align-items: stretch;
@@ -338,19 +334,13 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@media (max-width: 1440px) {
-  #app {
-    padding: 0 16px;
-    font-size: 18px;
-  }
-}
+
 a {
   cursor: pointer;
 }
 
 .wrapper1320 {
   width: 100%;
-  max-width: 1320px;
   margin: 0 auto;
 }
 
@@ -380,7 +370,7 @@ a {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+
   opacity: 0;
   transition: opacity 0.5s ease;
   will-change: transform, opacity;
@@ -650,4 +640,19 @@ a {
 
 *::selection {
   background-color: var(--green);
+}
+.titles {
+  font-size: 90px;
+}
+
+@media only screen and (max-width: 768px) {
+  .titles {
+    font-size: 66px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .titles {
+    font-size: 33px;
+  }
 }

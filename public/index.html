@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
   <link rel="stylesheet" href="styles/hero.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +11,27 @@
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <script>
       setTimeout(function() {
-        var element = document.getElementById("loader");
-        element.classList.add("hidden");
-        element.classList.remove("flex");}, 4001);
+        var element = document.getElementById("loader-wrapper");
+        element.classList.add("hidden");;}, 0);
     </script>
 
 </head>
-<body class="bg-[#0F0F0F] h-screen">
+
+<body class="bg-[#0F0F0F] h-screen px-15">
+
+
+  <div id="loader-wrapper" class="bg-[#0F0F0F] z-50 w-full fixed items-center justify-center flex top-0 left-0 bottom-0 right-0" >
 <div
   id="loader"
-  class="bg-[#0F0F0F] flex min-h-screen justify-center items-center"
+  class="bg-[#0F0F0F] h-screen "
 >
-  <div id="loader-cube" class="bg-[#0F0F0F] scale-50" data-v-app="">
+
+  <div id="loader-cube" class="bg-[#0F0F0F] fixed items-center justify-center flex top-0 left-0 bottom-0 right-0  " >
     <main
       data-v-8daa8809=""
-      class="h-screen flex items-center justify-center"
+      
     >
-      <div data-v-8daa8809="" id="home" class="wrapper1320">
+      <div data-v-8daa8809="" id="home" >
         <div
           data-v-bbfd8b70=""
           data-v-8daa8809=""
@@ -72,7 +77,7 @@
             data-v-bbfd8b70=""
             class="row row-3 animated left"
             style="
-              height: 100px;
+              height: 35px;
               margin-bottom: 100px;
               width: 415px;
               animation-duration: 2.5s;
@@ -85,19 +90,21 @@
             </div>
             <h1 data-v-bbfd8b70="" class="hero-loader">&zwnj;</h1>
           </div>
+          
         </div>
       </div>
     </main>
   </div>
 </div>
+</div>
 
   <header class="bg-[#0F0F0F]">
-    <nav id="nav" class="text-xl flex justify-between items-center w-[95%] duration-500 mx-auto">
+    <nav id="nav" class="text-xl flex justify-between items-center  px-6 md:px-20  w-[100%] duration-500 mx-auto">
       <div>
-        <img class="relative z-50 duration-500 p-3 w-20 cursor-pointer" id="logo-img" src="dx.png" alt="...">
+        <img class="relative z-40 duration-500 p-3 w-20 cursor-pointer" id="logo-img" src="./images/dx.png" alt="...">
       </div>
       <div
-        class="nav-links duration-500 md:static absolute bg-[#0F0F0F] md:min-h-fit min-h-[60vh] left-0 top-[-600%] md:w-auto  w-full flex items-center px-5">
+        class="nav-links duration-500 md:static absolute bg-[#0F0F0F]  md:min-h-fit min-h-[60vh] left-0 top-[-600%] md:w-auto  w-full flex items-center px-5">
         <ul class="text-white flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
           <li>
             <a href="#" class="relative  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
@@ -128,7 +135,7 @@
       </div>
       
         <ion-icon onclick="onToggleMenu(this)" name="menu"
-          class="text-white text-3xl relative z-50 cursor-pointer md:hidden"></ion-icon>
+          class="text-white text-3xl relative z-40 cursor-pointer md:hidden"></ion-icon>
       </div>
   </header>
 
@@ -148,9 +155,9 @@
     }
   </script>
 
-  <div id="app" class="bg-[#0F0F0F] pt-2" data-v-app="">
+  <div id="app" class="bg-[#0F0F0F] " data-v-app="">
     <main data-v-8daa8809="">
-      <div data-v-8daa8809="" id="home" class="wrapper1320">
+      <div data-v-8daa8809="" id="home" class="wrapper1320 py-2 px-6 md:px-20 md:py-4">
         <div data-v-bbfd8b70="" data-v-8daa8809="" class="hero">
           <div
             data-v-bbfd8b70=""
@@ -190,9 +197,9 @@
             data-v-bbfd8b70=""
             class="row row-3 animated left"
             style="
-              --h1-width: 347px;
-              width: calc(100% + 347px);
-              transform: translateX(0px);
+              --h1-width: 358px;
+              width: calc(100% + 358px);
+              transform: translateX(-171px);
               animation-duration: 4.5s;
               animation-delay: 0.6s;
             "
@@ -236,13 +243,12 @@
             <div data-v-bbfd8b70="" class="ruler">
               <span data-v-bbfd8b70=""></span>
             </div>
-            <!-- Removed duplicate ID from second ZAGREB heading -->
             <h1 data-v-bbfd8b70="" class="hero"><span style="font-family:'Druk Wide Trial'; font-style: italic; line-height: 1;">IIT</span></h1>
             <h1 data-v-bbfd8b70="" id="row5Heading"  class="hero"></h1>
             <div data-v-bbfd8b70="" class="ruler">
               <span data-v-bbfd8b70="" ></span>
             </div>
-            <!-- Removed duplicate ID from second ZAGREB heading -->
+            
             
             
 
@@ -250,7 +256,7 @@
         </div>
         <div
             data-v-bbfd8b70=""
-            class="row row-6 animated right"
+            class="row row-6 animated left"
             style="
             --h1-width: 323px;
             width: calc(100% + 323px);
@@ -268,6 +274,28 @@
       </div>
     </main>
   </div>
+
+  <div id="venue" class="w-full py-6 px-6 md:px-20 md:py-8 rounded-lg shadow-lg">
+    <div id="venue-header" class="mb-4">
+      <h1 class="titles font-bold text-white">
+        <span style="font-family: 'Druk Wide Trial'; font-weight: bold;">THE </span>
+        <span>VENUE</span>
+      </h1>
+    </div>
+    <div class="row flex flex-col md:grid md:grid-cols-3">
+      <div class="column flex-1 p-1 pb-4">
+        <img src="./images/iit-logo.jpg" alt="Snow" class="aspect-square rounded-xl w-full">
+      </div>
+      <div class="column flex-1 p-1">
+        <img src="./images/iit.webp" alt="Forest" class="aspect-square object-cover rounded-xl w-full">
+      </div>
+      <div class="column flex-1 p-1 text-center md:text-left">
+        <p style="font-size:37.5px" class="text-white uppercase w-full">The Institut International de Technologie in Sfax, Tunisia, is a higher education institution specializing in technology and engineering, emphasizing practical learning and industry collaboration.​</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  
 </body>
 
 </html>
