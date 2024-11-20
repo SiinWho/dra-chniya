@@ -1,4 +1,10 @@
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
+  setTimeout(function () {
+    var element = document.getElementById("loader");
+    element.classList.add("hidden");
+    element.classList.remove("flex");
+  }, 4001);
   window.addEventListener("load", () => {
     let birthday = "2024,12,12";
 
@@ -72,6 +78,7 @@
     }
   });
 </script>
+<link rel="stylesheet" href="../loader/styles/hero.css" />
 <style>
   @import url("https://fonts.cdnfonts.com/css/druk-trial");
   @import "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css";
@@ -216,31 +223,112 @@
     background-size: contain;
   }
 </style>
-<div class="max-w-4xl h-screen mx-auto z-10">
-  <div class="mt-14 flex h-screen items-center justify-between">
-    <div class="flex items-center mr-7 flex-col flex-nowrap">
-      <span
-        class="time-elem relative green w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
-        id="days"
-      >
-        <span class="top">00</span>
-        <span class="top-back">
-          <span>00</span>
-        </span>
-        <span class="bottom">08</span>
-        <span class="bottom-back">
-          <span>00</span>
-        </span>
-      </span>
-      <span class="title">Days</span>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="loader"
+      class="bg-[#0F0F0F] flex min-h-screen justify-center items-center"
+    >
+      <div id="loader-cube" class="bg-[#0F0F0F] scale-50" data-v-app="">
+        <main
+          data-v-8daa8809=""
+          class="h-screen flex items-center justify-center"
+        >
+          <div data-v-8daa8809="" id="home" class="wrapper1320">
+            <div
+              data-v-bbfd8b70=""
+              data-v-8daa8809=""
+              class="hero-loader"
+              style="margin-bottom: 0"
+            >
+              <div
+                data-v-bbfd8b70=""
+                class="row row-1 animated left"
+                style="
+                  height: 35px;
+                  margin-bottom: 100px;
+                  width: 415px;
 
-    <div class="flex items-center mr-7 flex-col flex-nowrap">
-      <span
-        class="time-elem pink relative w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
-        id="hours"
-      >
-        <!-- <span class="top">00</span>
+                  animation-duration: 2.5s;
+                  animation-delay: 0;
+                "
+              >
+                <h1 data-v-bbfd8b70="" class="hero-loader"></h1>
+                <div data-v-bbfd8b70="" class="ruler">
+                  <span data-v-bbfd8b70=""></span>
+                </div>
+                <h1 data-v-bbfd8b70="" class="hero-loader">&zwnj;</h1>
+              </div>
+              <div
+                data-v-bbfd8b70=""
+                class="row row-2 animated right"
+                style="
+                  height: 35px;
+                  margin-bottom: 100px;
+                  width: 415px;
+                  animation-duration: 2.5s;
+                  animation-delay: 0;
+                "
+              >
+                <h1 data-v-bbfd8b70="" class="hero-loader"></h1>
+                <div data-v-bbfd8b70="" class="ruler">
+                  <span data-v-bbfd8b70=""></span>
+                </div>
+                <h1 data-v-bbfd8b70="" class="hero-loader">&zwnj;</h1>
+              </div>
+              <div
+                data-v-bbfd8b70=""
+                class="row row-3 animated left"
+                style="
+                  height: 100px;
+                  margin-bottom: 100px;
+                  width: 415px;
+                  animation-duration: 2.5s;
+                  animation-delay: 0;
+                "
+              >
+                <h1 data-v-bbfd8b70="" class="hero-loader"></h1>
+                <div data-v-bbfd8b70="" class="ruler">
+                  <span data-v-bbfd8b70=""></span>
+                </div>
+                <h1 data-v-bbfd8b70="" class="hero-loader">&zwnj;</h1>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="max-w-4xl h-screen mx-auto z-10">
+      <div class="mt-14 flex h-screen items-center justify-between">
+        <div class="flex items-center mr-7 flex-col flex-nowrap">
+          <span
+            class="time-elem relative green w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
+            id="days"
+          >
+            <span class="top">00</span>
+            <span class="top-back">
+              <span>00</span>
+            </span>
+            <span class="bottom">08</span>
+            <span class="bottom-back">
+              <span>00</span>
+            </span>
+          </span>
+          <span class="title">Days</span>
+        </div>
+
+        <div class="flex items-center mr-7 flex-col flex-nowrap">
+          <span
+            class="time-elem pink relative w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
+            id="hours"
+          >
+            <!-- <span class="top">00</span>
           <span class="top-back">
             <span>00</span>
           </span>
@@ -248,16 +336,16 @@
           <span class="bottom-back">
             <span>00</span>
           </span> -->
-      </span>
-      <span class="title">Hours</span>
-    </div>
+          </span>
+          <span class="title">Hours</span>
+        </div>
 
-    <div class="flex items-center mr-7 flex-col flex-nowrap">
-      <span
-        class="time-elem green relative w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
-        id="minutes"
-      >
-        <!-- <span class="top">00</span>
+        <div class="flex items-center mr-7 flex-col flex-nowrap">
+          <span
+            class="time-elem green relative w-36 h-32 shadow-xl flex items-center justify-center mb-5 rounded-lg text-6xl"
+            id="minutes"
+          >
+            <!-- <span class="top">00</span>
           <span class="top-back">
             <span>00</span>
           </span>
@@ -265,24 +353,25 @@
           <span class="bottom-back">
             <span>00</span>
           </span> -->
-      </span>
-      <span class="title">Minutes</span>
-    </div>
+          </span>
+          <span class="title">Minutes</span>
+        </div>
 
-    <div class="flex items-center mr-7 flex-col flex-nowrap">
-      <span class="seconds pink time-elem mb-6 text-center" id="seconds">
-        <span class="top">00</span>
-        <span class="top-back">
-          <span>00</span>
-        </span>
-        <span class="bottom">00</span>
-        <span class="bottom-back">
-          <span>00</span>
-        </span>
-      </span>
-      <span class="title">Seconds</span>
+        <div class="flex items-center mr-7 flex-col flex-nowrap">
+          <span class="seconds pink time-elem mb-6 text-center" id="seconds">
+            <span class="top">00</span>
+            <span class="top-back">
+              <span>00</span>
+            </span>
+            <span class="bottom">00</span>
+            <span class="bottom-back">
+              <span>00</span>
+            </span>
+          </span>
+          <span class="title">Seconds</span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
+  </body>
+</html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
