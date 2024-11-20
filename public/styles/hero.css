@@ -601,7 +601,7 @@ a {
   0% {
     opacity: 1;
   }
-  75% {
+  90% {
     opacity: 1;
   }
   100% {
@@ -625,7 +625,7 @@ a {
     transform: scale(0.4);
   }
   100% {
-    transform: scale(0.35);
+    transform: scale(0);
   }
 }
 #loader {
