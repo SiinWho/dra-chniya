@@ -352,3 +352,365 @@ a {
   animation: Loading-Cube 4s ease-in-out;
   animation-iteration-count: 1;
 }
+.numberedRow[data-v-661a9fb4] {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-bottom: solid 4px white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+@media (max-width: 1025px) {
+  .numberedRow[data-v-661a9fb4] {
+    border-bottom: solid 2px white;
+  }
+}
+.numberedRow[data-v-661a9fb4]:first-of-type {
+  border-top: solid 4px white;
+}
+@media (max-width: 1025px) {
+  .numberedRow[data-v-661a9fb4]:first-of-type {
+    border-top: solid 2px white;
+  }
+}
+.numberedRow__number[data-v-661a9fb4] {
+  width: 50%;
+  display: flex;
+}
+@media (max-width: 1025px) {
+  .numberedRow__number[data-v-661a9fb4] {
+    width: auto;
+    margin-right: 24px;
+  }
+}
+.numberedRow__number span[data-v-661a9fb4] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 127px;
+  height: 127px;
+  font-family: DrukText-Super;
+  font-size: 70px;
+  line-height: 80px;
+  letter-spacing: -0.04em;
+  color: black;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50%;
+}
+@media (max-width: 1025px) {
+  .numberedRow__number span[data-v-661a9fb4] {
+    font-size: 24px;
+    line-height: 24px;
+    width: 54px;
+    height: 54px;
+  }
+}
+.numberedRow__info[data-v-661a9fb4] {
+  width: 50%;
+  font-size: 26px;
+  line-height: 32px;
+}
+@media (max-width: 1025px) {
+  .numberedRow__info[data-v-661a9fb4] {
+    width: auto;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+.numberedRow__info a[data-v-661a9fb4] {
+  color: var(--white);
+}
+.numberedRow.agendaTemplate .numberedRow__number[data-v-661a9fb4] {
+  width: auto;
+}
+.numberedRow.agendaTemplate .numberedRow__info[data-v-661a9fb4] {
+  display: flex;
+  width: auto;
+  flex: 1;
+  justify-content: flex-end;
+  letter-spacing: -0.04em;
+  font-family: DrukText-SuperItalic;
+  font-size: 90px;
+  line-height: 80px;
+  text-transform: uppercase;
+  text-align: right;
+}
+@media (max-width: 1025px) {
+  .numberedRow.agendaTemplate .numberedRow__info[data-v-661a9fb4] {
+    font-size: 33px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 1025px) {
+  .numberedRow.hasTitle[data-v-661a9fb4] {
+    display: block;
+  }
+}
+@media (max-width: 1025px) {
+  .numberedRow.hasTitle .numberedRow__info[data-v-661a9fb4] {
+    margin-bottom: 30px;
+  }
+}
+.numberedRow .numberedRow__title[data-v-661a9fb4] {
+  width: 50%;
+  margin: 30px 0;
+}
+@media (max-width: 1025px) {
+  .numberedRow .numberedRow__title[data-v-661a9fb4] {
+    width: 100%;
+  }
+}
+.numberedRow .numberedRow__title h4[data-v-661a9fb4] {
+  display: flex;
+  width: auto;
+  letter-spacing: -0.04em;
+  font-family: DrukText-SuperItalic;
+  font-size: 90px;
+  line-height: 80px;
+  text-transform: uppercase;
+}
+@media (max-width: 1025px) {
+  .numberedRow .numberedRow__title h4[data-v-661a9fb4] {
+    width: 100%;
+    font-size: 33px;
+    line-height: 30px;
+  }
+}
+
+.agenda[data-v-8daa8809] {
+  padding-top: 30px;
+  margin-bottom: 170px;
+}
+@media (max-width: 1025px) {
+  .agenda[data-v-8daa8809] {
+    margin-bottom: 60px;
+  }
+}
+.agenda h2[data-v-8daa8809] {
+  font-family: DrukWide-Super;
+  font-size: 90px;
+  line-height: 80px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+@media (max-width: 1025px) {
+  .agenda h2[data-v-8daa8809] {
+    font-size: 33px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+.agenda__the[data-v-8daa8809] {
+  font-family: DrukText-Medium;
+}
+.agenda__text[data-v-8daa8809] {
+  font-family: DrukWide-Medium;
+}
+.agenda .description[data-v-8daa8809] {
+  margin: 0;
+}
+.agenda .description h3[data-v-8daa8809] {
+  margin-top: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: 400;
+}
+html {
+  display: block;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  cursor: url(/assets/cursor-d9ef1de2.svg) 30 30, auto;
+}
+body {
+  display: block;
+  overflow-x: hidden;
+  color: white;
+  background: black;
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.05em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+a:-webkit-any-link,
+button,
+.closeModal,
+.speaker {
+  cursor: url(/assets/cursor-hover-827ea940.svg) 13 13, auto !important;
+}
+@font-face {
+  font-family: DrukText-Super;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukText-Super"),
+    url(/fonts/DrukText-Super-Trial.otf) format("opentype"),
+    url(/fonts/druktext-super-trial-webfont.woff2) format("woff2"),
+    url(/fonts/druktext-super-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukText-HeavyItalic;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukText-HeavyItalic"),
+    url(/fonts/DrukText-HeavyItalic-Trial.otf) format("opentype"),
+    url(/fonts/druktext-heavyitalic-trial-webfont.woff2) format("woff2"),
+    url(/fonts/druktext-heavyitalic-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukText-Medium;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukText-Medium"),
+    url(/fonts/DrukText-Medium-Trial.otf) format("opentype"),
+    url(/fonts/druktext-medium-trial-webfont.woff2) format("woff2"),
+    url(/fonts/druktext-medium-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukText-MediumItalic;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukText-MediumItalic"),
+    url(/fonts/DrukText-MediumItalic-Trial.otf) format("opentype"),
+    url(/fonts/druktext-mediumitalic-trial-webfont.woff2) format("woff2"),
+    url(/fonts/druktext-mediumitalic-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukText-SuperItalic;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukText-SuperItalic"),
+    url(/fonts/DrukText-SuperItalic-Trial.otf) format("opentype"),
+    url(/fonts/druktext-superitalic-trial-webfont.woff2) format("woff2"),
+    url(/fonts/druktext-superitalic-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukWide-Bold;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukWide-Bold"),
+    url(/fonts/DrukWide-Bold-Trial.otf) format("opentype"),
+    url(/fonts/drukwide-bold-trial-webfont.woff2) format("woff2"),
+    url(/fonts/drukwide-bold-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukWide-Heavy;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukWide-Heavy"),
+    url(/fonts/DrukWide-Heavy-Trial.otf) format("opentype"),
+    url(/fonts/drukwide-heavy-trial-webfont.woff2) format("woff2"),
+    url(/fonts/drukwide-heavy-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukWide-HeavyItalic;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukWide-HeavyItalic"),
+    url(/fonts/DrukWide-HeavyItalic-Trial.otf) format("opentype"),
+    url(/fonts/drukwide-heavyitalic-trial-webfont.woff2) format("woff2"),
+    url(/fonts/drukwide-heavyitalic-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukWide-Medium;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukWide-Medium"),
+    url(/fonts/DrukWide-Medium-Trial.otf) format("opentype"),
+    url(/fonts/drukwide-medium-trial-webfont.woff2) format("woff2"),
+    url(/fonts/drukwide-medium-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukWide-MediumItalic;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukWide-MediumItalic"),
+    url(/fonts/DrukWide-MediumItalic-Trial.otf) format("opentype"),
+    url(/fonts/drukwide-mediumitalic-trial-webfont.woff2) format("woff2"),
+    url(/fonts/drukwide-mediumitalic-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukWide-Super;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukWide-Super"),
+    url(/fonts/DrukWide-Super-Trial.otf) format("opentype"),
+    url(/fonts/drukwide-super-trial-webfont.woff2) format("woff2"),
+    url(/fonts/drukwide-super-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukWide-SuperItalic;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukWide-SuperItalic"),
+    url(/fonts/DrukWide-SuperItalic-Trial.otf) format("opentype"),
+    url(/fonts/drukwide-superitalic-trial-webfont.woff2) format("woff2"),
+    url(/fonts/drukwide-superitalic-trial-webfont.woff) format("woff");
+}
+@font-face {
+  font-family: DrukCond-SuperItalic-Trial;
+  font-style: normal;
+  font-display: swap;
+  src: local("DrukCond-SuperItalic-Trial"),
+    url(/fonts/DrukCond-SuperItalic-Trial.otf) format("opentype");
+}
+#app {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+.wrapper1320 {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.wrapper50 {
+  width: 50%;
+}
+@media (max-width: 1025px) {
+  .wrapper50 {
+    width: 100%;
+  }
+}
+.allignRight {
+  display: flex;
+  justify-content: flex-end;
+}
+h2 {
+  margin-top: 30px;
+}
+h3 {
+  font-size: 48px;
+  line-height: 50px;
+  letter-spacing: -0.06em;
+  margin: 60px 0;
+}
+@media (max-width: 1025px) {
+  h3 {
+    font-size: 25px;
+    line-height: 28px;
+    margin: 30px 0;
+  }
+}
+h3 a {
+  text-decoration: none;
+  color: var(--yellow);
+}
+.white {
+  color: white;
+}
+.black {
+  color: black;
+}

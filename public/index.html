@@ -12,7 +12,7 @@
   <script>
       setTimeout(function() {
         var element = document.getElementById("loader-wrapper");
-        element.classList.add("hidden");;}, 0);
+        element.classList.add("hidden");;}, 4010);
     </script>
 
 </head>
@@ -155,10 +155,10 @@
     }
   </script>
 
-  <div id="app" class="bg-[#0F0F0F] " data-v-app="">
+  <div id="app" class="bg-[#0F0F0F]  " data-v-app="">
     <main data-v-8daa8809="">
-      <div data-v-8daa8809="" id="home" class="wrapper1320 py-2 px-6 md:px-20 md:py-4">
-        <div data-v-bbfd8b70="" data-v-8daa8809="" class="hero">
+      <div data-v-8daa8809="" class="flex items-center justify-center  mb-16 pt-8 md:mb-40  px-6 md:px-20">
+        <div data-v-bbfd8b70="" data-v-8daa8809="" class="hero w-full  ">
           <div
             data-v-bbfd8b70=""
             class="row row-1 animated left"
@@ -275,26 +275,82 @@
     </main>
   </div>
 
-  <div id="venue" class="w-full py-6 px-6 md:px-20 md:py-8 rounded-lg shadow-lg">
+  <div id="venue" class="w-full mb-16 pt-8 md:mb-40  px-6 md:px-20 rounded-lg shadow-lg">
     <div id="venue-header" class="mb-4">
       <h1 class="titles font-bold text-white">
-        <span style="font-family: 'Druk Wide Trial'; font-weight: bold;">THE </span>
+        <span style="font-family: 'Druk Wide Trial'; font-weight: 500; ">THE</span>
         <span>VENUE</span>
       </h1>
     </div>
-    <div class="row flex flex-col md:grid md:grid-cols-3">
+    <div class="row flex flex-col xl:flex xl:flex-row">
       <div class="column flex-1 p-1 pb-4">
-        <img src="./images/iit-logo.jpg" alt="Snow" class="aspect-square rounded-xl w-full">
+        <img src="./images/iit-logo.jpg"  class="aspect-square rounded-xl w-full">
       </div>
       <div class="column flex-1 p-1">
-        <img src="./images/iit.webp" alt="Forest" class="aspect-square object-cover rounded-xl w-full">
+        <img src="./images/iit.webp"  class=" aspect-square object-cover rounded-xl w-full">
       </div>
-      <div class="column flex-1 p-1 text-center md:text-left">
-        <p style="font-size:37.5px" class="text-white uppercase w-full">The Institut International de Technologie in Sfax, Tunisia, is a higher education institution specializing in technology and engineering, emphasizing practical learning and industry collaboration.​</p>
+      <div class="column flex-1 p-1 text-center  lg:text-left">
+        <p id="venue-text" class="text-white   uppercase w-full">The Institut International de Technologie in Sfax, Tunisia, is a higher education institution specializing in technology and engineering, emphasizing practical learning and industry collaboration.​</p>
       </div>
     </div>
     </div>
   </div>
+  <div data-v-8daa8809="" id="agenda" class="titles agenda w-full mb-16 pt-8 md:mb-40  px-6 md:px-20">
+    <h1 class="titles font-bold text-white">
+      <span style="font-family: 'Druk Wide Trial'; font-weight: bolder; ">WHAT</span>
+      <span  style="font-family: 'Druk Cond Trial';  letter-spacing: 0.3rem;" >AWAITS</span>
+      <span style="font-family: 'Druk Text Wide Trial'; letter-spacing: -0.7rem;" >YOU</span>
+    </h1>
+    <div data-v-8daa8809="" class="listNumbered">
+        <div data-v-661a9fb4="" data-v-8daa8809="" class="numberedRow agendaTemplate">
+            <div data-v-661a9fb4="" class="numberedRow__number">
+                <span data-v-661a9fb4="" style="background-color: var(--purple);">01</span>
+            </div>
+            <h4 data-v-661a9fb4="" class="numberedRow__info">
+                <span data-v-661a9fb4="">Cybersecurity</span>
+            </h4>
+        </div>
+        <div data-v-661a9fb4="" data-v-8daa8809="" class="numberedRow agendaTemplate">
+            <div data-v-661a9fb4="" class="numberedRow__number">
+                <span data-v-661a9fb4="" style="background-color: var(--green);">02</span>
+            </div>
+            <h4 data-v-661a9fb4="" class="numberedRow__info">
+                <span data-v-661a9fb4="">Blockchain</span>
+            </h4>
+        </div>
+        <div data-v-661a9fb4="" data-v-8daa8809="" class="numberedRow agendaTemplate">
+            <div data-v-661a9fb4="" class="numberedRow__number">
+                <span data-v-661a9fb4="" style="background-color: #7344FA;">03</span>
+            </div>
+            <h4 data-v-661a9fb4="" class="numberedRow__info">
+                <span data-v-661a9fb4="">IOT</span>
+            </h4>
+        </div>
+        <div data-v-661a9fb4="" data-v-8daa8809="" class="numberedRow agendaTemplate">
+            <div data-v-661a9fb4="" class="numberedRow__number">
+                <span data-v-661a9fb4="" style=" background-color: var(--yellow);">04</span>
+            </div>
+            <h4 data-v-661a9fb4="" class="numberedRow__info">
+                <span data-v-661a9fb4="">AI</span>
+            </h4>
+        </div>
+        
+        <div data-v-8daa8809="" class="listNumbered">
+          <div
+            data-v-661a9fb4=""
+            data-v-8daa8809=""
+            class="numberedRow hasTitle"
+          >
+            <div data-v-661a9fb4="" class="numberedRow__title">
+              <h4 data-v-661a9fb4="" class="italic">BOILER ROOM</h4>
+            </div>
+            <h4 data-v-661a9fb4="" class="numberedRow__info">
+              <span data-v-661a9fb4="" class="text-xl lg:text-3xl uppercase">A broadcasting and party concept that has been shaking up the electronic music scene</span
+              >
+            </h4>
+          </div>
+        
+</div>
   
 </body>
 

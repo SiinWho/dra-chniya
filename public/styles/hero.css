@@ -51,6 +51,16 @@ html {
     margin-top: -0.5vw;
   }
 }
+.listNumbered[data-v-e80b30a3] {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.listNumbered[data-v-91f7fdcc] {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
 @media (max-width: 414px) {
   .hero .row h1[data-v-bbfd8b70] {
     font-size: 10.5vw;
@@ -298,11 +308,6 @@ html {
 }
 
 :root {
-  --gradient: linear-gradient(
-    90deg,
-    rgba(93, 214, 44, 1) 0%,
-    rgba(177, 255, 145, 1) 100%
-  );
   --white: #ffffff;
   --black: #0f0f0f;
   --purple: #d62c9d;
@@ -337,11 +342,6 @@ html {
 
 a {
   cursor: pointer;
-}
-
-.wrapper1320 {
-  width: 100%;
-  margin: 0 auto;
 }
 
 .white {
@@ -645,14 +645,175 @@ a {
   font-size: 90px;
 }
 
-@media only screen and (max-width: 768px) {
-  .titles {
-    font-size: 66px;
+#venue-text {
+  font-size: 5vw;
+}
+
+@media (min-width: 1024px) {
+  #venue-text {
+    font-size: 2.5vw;
+  }
+}
+.numberedRow[data-v-661a9fb4] {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-bottom: solid 4px white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+@media (max-width: 1025px) {
+  .numberedRow[data-v-661a9fb4] {
+    border-bottom: solid 2px white;
+  }
+}
+.numberedRow[data-v-661a9fb4]:first-of-type {
+  border-top: solid 4px white;
+}
+@media (max-width: 1025px) {
+  .numberedRow[data-v-661a9fb4]:first-of-type {
+    border-top: solid 2px white;
+  }
+}
+.numberedRow__number[data-v-661a9fb4] {
+  width: 50%;
+  display: flex;
+}
+@media (max-width: 1025px) {
+  .numberedRow__number[data-v-661a9fb4] {
+    width: auto;
+    margin-right: 24px;
+  }
+}
+.numberedRow__number span[data-v-661a9fb4] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 127px;
+  height: 127px;
+  font-size: 70px;
+  line-height: 80px;
+  letter-spacing: -0.04em;
+  color: black;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50%;
+}
+@media (max-width: 1025px) {
+  .numberedRow__number span[data-v-661a9fb4] {
+    font-size: 24px;
+    line-height: 24px;
+    width: 54px;
+    height: 54px;
+  }
+}
+.numberedRow__info[data-v-661a9fb4] {
+  width: 50%;
+  font-size: 26px;
+  line-height: 32px;
+}
+@media (max-width: 1025px) {
+  .numberedRow__info[data-v-661a9fb4] {
+    width: auto;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+.numberedRow__info a[data-v-661a9fb4] {
+  color: var(--white);
+}
+.numberedRow.agendaTemplate .numberedRow__number[data-v-661a9fb4] {
+  width: auto;
+}
+.numberedRow.agendaTemplate .numberedRow__number[data-v-661a9fb4] span {
+  margin: auto;
+}
+.numberedRow.agendaTemplate .numberedRow__info[data-v-661a9fb4] {
+  display: flex;
+  width: auto;
+  flex: 1;
+  justify-content: flex-end;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 90px;
+  line-height: 80px;
+  text-transform: uppercase;
+  text-align: right;
+}
+@media (max-width: 1025px) {
+  .numberedRow.agendaTemplate .numberedRow__info[data-v-661a9fb4] {
+    font-size: 33px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 1025px) {
+  .numberedRow.hasTitle[data-v-661a9fb4] {
+    display: block;
+  }
+}
+@media (max-width: 1025px) {
+  .numberedRow.hasTitle .numberedRow__info[data-v-661a9fb4] {
+    margin-bottom: 30px;
+  }
+}
+.numberedRow .numberedRow__title[data-v-661a9fb4] {
+  width: 50%;
+  margin: 30px 0;
+}
+@media (max-width: 1025px) {
+  .numberedRow .numberedRow__title[data-v-661a9fb4] {
+    width: 100%;
+  }
+}
+.numberedRow .numberedRow__title h4[data-v-661a9fb4] {
+  display: flex;
+  width: auto;
+  letter-spacing: -0.04em;
+  font-size: 90px;
+  line-height: 80px;
+  text-transform: uppercase;
+}
+@media (max-width: 1025px) {
+  .numberedRow .numberedRow__title h4[data-v-661a9fb4] {
+    width: 100%;
+    font-size: 33px;
+    line-height: 30px;
   }
 }
 
-@media only screen and (max-width: 480px) {
-  .titles {
+.agenda h2[data-v-8daa8809] {
+  font-family: DrukWide-Super;
+  font-size: 90px;
+  line-height: 80px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+@media (max-width: 1025px) {
+  .agenda h2[data-v-8daa8809] {
     font-size: 33px;
+    line-height: 30px;
+    margin-bottom: 30px;
   }
+}
+.agenda__the[data-v-8daa8809] {
+  font-family: DrukText-Medium;
+}
+.agenda__text[data-v-8daa8809] {
+  font-family: DrukWide-Medium;
+}
+.agenda .description[data-v-8daa8809] {
+  margin: 0;
+}
+.agenda .description h3[data-v-8daa8809] {
+  margin-top: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: 400;
 }
