@@ -643,6 +643,20 @@ a {
 }
 .titles {
   font-size: 90px;
+  line-height: 80px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 1025px) {
+  .titles {
+    font-size: 33px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 #venue-text {
