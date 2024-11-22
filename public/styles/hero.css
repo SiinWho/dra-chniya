@@ -971,15 +971,7 @@ html {
     border-color: #0f0f0f;
   }
 }
-.speakers[data-v-8daa8809] {
-  padding-top: 30px;
-  margin-bottom: 250px;
-}
-@media (max-width: 1025px) {
-  .speakers[data-v-8daa8809] {
-    margin-bottom: 60px;
-  }
-}
+
 .speakers h2[data-v-8daa8809] {
   font-size: 90px;
   line-height: 80px;
@@ -1197,9 +1189,6 @@ html {
 }
 .sponsors .description[data-v-8daa8809] {
   margin: 0;
-}
-.contact[data-v-8daa8809] {
-  padding-top: 30px;
 }
 .contact h2[data-v-8daa8809] {
   font-size: 90px;
