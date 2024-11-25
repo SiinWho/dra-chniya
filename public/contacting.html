@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TW Portfolio | Free Tailwind CSS theme by Fyrestrap</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              Montserrat: ["Montserrat"],
+              "Noto-Sans": ['"Noto Sans"'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body id="top" class="font-Noto-Sans">
+    <div class="contact-wrapper" class="w-1/2 bg-black">
+      <section id="contact" class="pb-10 md:pb-20">
+        <div class="container h-full mx-auto px-0 lg:px-20 pb-10 pt-24">
+          <div class="px-5 md:px-20 pb-20">
+            <div class="container text-center flex mb-20">
+              <ul class="flex content-center gap-5 text-gray-50">
+                <li>
+                  <a href="#" class="">
+                    <span class="fa-stack text-slate-800">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="">
+                    <span class="fa-stack text-slate-800">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="">
+                    <span class="fa-stack text-slate-800">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <form class="grid grid-cols-2 gap-5 text-lg">
+              <div class="col-span-2 md:col-span-1">
+                <input
+                  type="text"
+                  id="first_name"
+                  class="bg-gray-50 border border-gray-100 rounded-full focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5 pl-7"
+                  placeholder="First name"
+                />
+              </div>
+
+              <div class="col-span-2 md:col-span-1">
+                <input
+                  type="text"
+                  id="last_name"
+                  class="bg-gray-50 border border-gray-100 rounded-full focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5 pl-7"
+                  placeholder="Last name"
+                />
+              </div>
+
+              <div class="col-span-2 md:col-span-1">
+                <input
+                  type="email"
+                  id="email_address"
+                  class="bg-gray-50 border border-gray-100 rounded-full focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5 pl-7"
+                  placeholder="Email"
+                />
+              </div>
+
+              <div class="col-span-2 md:col-span-1">
+                <input
+                  type="tel"
+                  id="phone_number"
+                  class="bg-gray-50 border border-gray-100 rounded-full focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5 pl-7"
+                  placeholder="Phone number"
+                />
+              </div>
+
+              <div class="col-span-2">
+                <textarea
+                  id="message"
+                  class="bg-gray-50 border border-gray-100 text-base rounded-2xl focus:ring-yellow-400 focus:border-yellow-400 block w-full p-2.5 pl-7"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+
+              <button
+                type="button"
+                class="text-white hover:text-slate-800 font-semibold bg-slate-800 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-lg w-full sm:w-auto px-5 py-2.5 text-center col-span-2"
+                onclick="sendMessage()"
+              >
+                Send message
+              </button>
+            </form>
+
+            <div id="emailResponse"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
