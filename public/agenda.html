@@ -14,8 +14,22 @@
         setTimeout(function () {
             var element = document.getElementById("loader-wrapper");
             element.classList.add("hidden");
-        }, 10);
+        }, 4010);
     </script>
+    <script>
+        function Day1() {
+          document.getElementById("day1-list").classList.remove("hidden");
+          document.getElementById("day2-list").classList.add("hidden");
+          document.getElementById("day1-button").classList.add("isActive");
+          document.getElementById("day2-button").classList.remove("isActive");
+        }
+        function Day2() {
+          document.getElementById("day1-list").classList.add("hidden");
+          document.getElementById("day2-list").classList.remove("hidden");
+          document.getElementById("day1-button").classList.remove("isActive");
+          document.getElementById("day2-button").classList.add("isActive");
+        }
+      </script>
 </head>
 
 <body class="bg-[#0F0F0F] h-screen px-15">
@@ -136,10 +150,400 @@
         <div class="titles">
             <span style="font-family: 'Druk Wide Trial'" class="font-black">AG</span><span class="italic font-bold">ENDA</span>
         </div>
-        <div class="">
-
-        </div>
+        <div data-v-app="">
+            <div data-v-412035aa="" class="dayList">
+              <a
+                data-v-412035aa=""
+                id="day1-button"
+                href="#"
+                onclick="Day1()"
+                class="agendaButton isActive"
+                ><span data-v-412035aa="">DAY 01</span></a
+              ><a
+                data-v-412035aa=""
+                id="day2-button"
+                href="#"
+                onclick="Day2()"
+                class="agendaButton"
+                ><span data-v-412035aa="">DAY 02</span></a
+              >
+            </div>
+            <div data-v-412035aa="" class="agenda">
+              <div data-v-412035aa="" id="day1-list" class="agendaList">
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">12:00 - 13:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">CHECK IN</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">13:30 - 14:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">OPENING CEREMONY</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">14:30 - 15:30</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">PANEL DISCUSSION</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">15:30 - 16:30</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">
+                        MUSIC AND COFFEE BREAK
+                      </div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">16:30 - 18:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">WORKSHOPS</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">18:00 - 19:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">FUN-ZONE</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">19:30 - 21:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">DINNER</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">21:00 -></div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">HACKATHON KICKOFF</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">00:00 - 01:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">BOILER ROOM</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-v-412035aa="" id="day2-list" class="hidden agendaList">
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">07:00 - 08:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">BREAKFAST</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">08:00 - 12:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">RETURN TO HACKATHON</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">12:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">END OF HACKATHON</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">12:00 - 13:30</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">LUNCH</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">13:30 - 15:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">PITCH</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div data-v-412035aa="" class="agendaItem">
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="time">15:00</div>
+                    </div>
+                    <div data-v-412035aa="" class="right"><!----></div>
+                  </div>
+                  <div data-v-412035aa="" class="agendaItemSection">
+                    <div data-v-412035aa="" class="left">
+                      <div data-v-412035aa="" class="title">CLOSING CEREMONY</div>
+                      <!---->
+                    </div>
+                    <div data-v-412035aa="" class="right">
+                      <div data-v-412035aa="" class="speakerInfo">
+                        <!----><img data-v-412035aa="" alt="" /><!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
+    <footer data-v-8daa8809="" id="contact" class="contact w-full mb-16 pt-8 md:mb-40  px-6 md:px-20">
+        <h1 data-v-8daa8809="" class="titles">
+            <span style="font-family: 'Druk Text Wide Trial';" class="font-black">GET </span><span
+                style="font-family: 'Druk Cond Trial';" data-v-8daa8809="">IN</span>
+            <span data-v-8daa8809="" style="font-family: 'Druk Wide Trial';" class="italic">TOUCH</span>
+        </h1>
+        <div data-v-8daa8809="" class="listNumbered">
+            <div data-v-661a9fb4="" data-v-8daa8809="" class="numberedRow hasTitle">
+                <div data-v-661a9fb4="" class="italic numberedRow__title">
+                    <h4 data-v-661a9fb4="">CONTACT</h4>
+                </div>
+                <h4 data-v-661a9fb4="" class="numberedRow__info">
+                    <a class="text-xl lg:text-3xl uppercase" data-v-661a9fb4=""
+                        href="mailto:CONTACT@dx.tn">CONTACT@dx.tn</a>
+                </h4>
+            </div>
+            <div data-v-661a9fb4="" data-v-8daa8809="" class="numberedRow hasTitle">
+                <div data-v-661a9fb4="" class="italic numberedRow__title">
+                    <h4 data-v-661a9fb4="">PARTNERS</h4>
+                </div>
+                <h4 data-v-661a9fb4="" class="numberedRow__info">
+                    <a class="text-xl lg:text-3xl uppercase" data-v-661a9fb4=""
+                        href="mailto:PARTENAIRE@dx.tn">PARTENAIRE@dx.tn</a>
+                </h4>
+            </div>
+        </div>
+        <!----><!---->
+        <button onclick="showcontact();" class="border-none w-full">
+            <div data-v-8daa8809="">
+                <div data-v-5122aac9="" data-v-8daa8809="" href="#" class="contactButton"><span
+                        data-v-5122aac9="">CONTACT
+                        US</span></div>
+            </div>
+        </button>
+        <!----><!---->
+
+        <section id="nav1"
+            class="text-xl lg:text-2xl flex justify-between items-center pt-16 pb-4  w-[100%] duration-500 mx-auto">
+            <div>
+                <img class="hidden relative z-40 duration-500 p-3 w-20 cursor-pointer" id="logo-img"
+                    src="./images/dx.png" alt="...">
+            </div>
+            <div class=" duration-500 static bg-[#0F0F0F]     w-auto  flex items-center px-5">
+                <ul class="text-white flex flex-row  items-center gap-[4vw] ">
+                    <li>
+                        <a href="https://www.linkedin.com/company/dxhackathon" target="_blank"
+                            class="relative cursor-pointer  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+                            LINKEDIN
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=61567533556417" target="_blank"
+                            class="relative cursor-pointer  w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+                            FACEBOOK
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/dx.tn" target="_blank"
+                            class="relative  cursor-pointer w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
+                            INSTAGRAM
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex cursor-pointer items-center gap-6">
+                <div class=" hidden relative cursor-pointer  max-md:scale-75  group">
+                    <div
+                        class="absolute cursor-pointer   inset-0 duration-1000 scale-90 -mr-10 md:mr-0  opacity-60 transitiona-all bg-gradient-to-r from-[#D62C9D] via-[#E9E9E9] to-[#5DD62C] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200">
+                    </div>
+                    <a href="#" title="Sign Up"
+                        class=" group cursor-pointer relative inline-flex scale-90 -mr-10 md:mr-0   items-center bg-[#0F0F0F] justify-center rounded-xl bg[] px-8 py-3  text-white transition-all duration-200 hover:bg-[#0F0F0F] hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
+                        role="button">SIGN UP
+                    </a>
+                </div>
+
+
+            </div>
+        </section>
+
+
+    </footer>
 </body>
 
 </html>

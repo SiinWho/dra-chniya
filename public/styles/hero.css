@@ -5,7 +5,6 @@
 }
 *,
 html {
-  color: #fff;
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
@@ -1732,4 +1731,189 @@ h3 a {
 }
 .contactButton[data-v-5122aac9] span:hover {
   cursor: pointer;
+}
+.dayList[data-v-412035aa] {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 60px;
+}
+
+.agendaButton[data-v-412035aa] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  height: 109px;
+  background-color: #fff;
+  position: relative;
+  color: #fff;
+  font-size: 90px;
+  line-height: 80px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all ease 0.3s;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 1025px) {
+  .agendaButton[data-v-412035aa] {
+    width: 100vw;
+    height: 60px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.agendaButton.isActive[data-v-412035aa] {
+  background-color: var(--yellow);
+  color: var(--purple);
+}
+
+.agendaButton[data-v-412035aa]:before {
+  content: "";
+  display: block;
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  background-color: var(--black);
+  border: none;
+  cursor: pointer;
+  border-radius: 775px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease 0.3s;
+}
+
+@media (min-width: 1024px) {
+  .agendaButton[data-v-412035aa]:hover {
+    background-color: var(--yellow);
+    cursor: pointer;
+    color: var(--black);
+    border-radius: 775px;
+    transition: border-radius ease-in-out 1.3s, color ease-in-out 0.3s;
+  }
+
+  .agendaButton[data-v-412035aa]:hover:before {
+    background-color: var(--yellow);
+  }
+}
+
+.agendaList[data-v-412035aa] {
+  flex-direction: column;
+  margin-bottom: 250px;
+}
+
+@media (max-width: 1025px) {
+  .agendaList[data-v-412035aa] {
+    margin-bottom: 170px;
+  }
+}
+
+.agendaList .agendaItem[data-v-412035aa] {
+  display: flex;
+  font-style: italic;
+  flex-direction: column;
+  border-top: solid white 4px;
+  padding: 20px 0;
+}
+
+@media (max-width: 1025px) {
+  .agendaList .agendaItem[data-v-412035aa] {
+    border-top: solid white 2px;
+  }
+}
+
+.agendaList .agendaItem[data-v-412035aa]:last-child {
+  border-bottom: solid white 4px;
+}
+
+@media (max-width: 1025px) {
+  .agendaList .agendaItem[data-v-412035aa]:last-child {
+    border-bottom: solid white 2px;
+  }
+}
+
+.agendaList .agendaItem .time[data-v-412035aa] {
+  font-size: 30px;
+}
+
+@media (max-width: 1025px) {
+  .agendaList .agendaItem .time[data-v-412035aa] {
+    font-size: 21px;
+  }
+}
+
+.agendaList .agendaItem .title[data-v-412035aa] {
+  font-size: 48px;
+  line-height: 50px;
+  letter-spacing: -0.06em;
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1025px) {
+  .agendaList .agendaItem .title[data-v-412035aa] {
+    font-size: 25px;
+    line-height: 28px;
+  }
+}
+
+.agendaList .agendaItem .speakerInfo[data-v-412035aa] {
+  font-size: 30px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1025px) {
+  .agendaList .agendaItem .speakerInfo[data-v-412035aa] {
+    font-size: 21px;
+    line-height: 23px;
+  }
+}
+
+.agendaList .agendaItemSection[data-v-412035aa] {
+  display: flex;
+  width: 100%;
+}
+
+.agendaList .agendaItemSection .left[data-v-412035aa] {
+  width: 65%;
+}
+
+.agendaList .agendaItemSection .right[data-v-412035aa] {
+  padding-left: 20px;
+}
+
+.agendaList .agendaItemSection[data-v-412035aa]:nth-of-type(1) {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1025px) {
+  .agendaList .agendaItemSection[data-v-412035aa]:nth-of-type(1) {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1025px) {
+  .agendaList .agendaItemSection[data-v-412035aa]:nth-of-type(2) {
+    flex-direction: column;
+  }
+
+  .agendaList .agendaItemSection:nth-of-type(2) .left[data-v-412035aa] {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .agendaList .agendaItemSection:nth-of-type(2) .right[data-v-412035aa] {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .agendaList .agendaItemSection:nth-of-type(2) .title[data-v-412035aa] {
+    max-width: 100%;
+  }
 }
