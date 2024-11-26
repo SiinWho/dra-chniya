@@ -1733,3 +1733,11 @@ h3 a {
 .contactButton[data-v-5122aac9] span:hover {
   cursor: pointer;
 }
+.custom-arrow::after {
+  content: '▼'; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
