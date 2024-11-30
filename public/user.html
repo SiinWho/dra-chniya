@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .hidden-section {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 flex">
+
+  <!-- Side Menu -->
+  <aside id="sideMenu" class="bg-gray-800 w-64 h-screen fixed top-0 left-0 transform -translate-x-full transition-transform lg:translate-x-0 shadow-lg z-50">
+    <div class="text-center py-6 border-b border-gray-700">
+      <h1 class="text-2xl font-bold uppercase text-gray-100">Menu</h1>
+    </div>
+    <nav class="flex-grow flex flex-col">
+      <button class="menu-link px-6 py-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" data-section="paymentSection">
+        Payment Section
+      </button>
+      <button class="menu-link px-6 py-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" data-section="countdownSection">
+        Countdown
+      </button>
+      <button class="menu-link px-6 py-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" data-section="qrCodeSection">
+        QR Code
+      </button>
+      <button class="menu-link px-6 py-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" data-section="teamsSection">
+        Teams
+      </button>
+    </nav>
+  </aside>
+
+  <!-- Toggle Button for Side Menu -->
+  <button id="menuToggle" class="lg:hidden flex top-4 left-4 bg-gray-800 text-gray-300 p-3 shadow-lg z-50 ">
+    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  d="M4 6h16M4 12h16m-7 6h7" />
+    </svg>
+  </button>
+
+  <!-- Main Content -->
+  <main class="ml-0 lg:ml-64 w-full min-h-screen p-6 transition-all">
+    <!-- Sections -->
+    <section id="paymentSection" class="bg-gray-800 rounded-lg shadow-lg p-6 mb-6 hidden-section">
+      <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">Payment Section</h2>
+      <p class="text-gray-400 mb-4">Select your payment method:</p>
+      <div class="flex gap-4">
+        <button id="payInPerson" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500">
+          Pay In-Person
+        </button>
+        <button id="payOnline" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-500">
+          Pay Online
+        </button>
+      </div>
+      <p id="paymentStatus" class="text-green-400 font-semibold mt-4 hidden">Payment Completed!</p>
+    </section>
+
+    <section id="countdownSection" class="bg-gray-800 rounded-lg shadow-lg p-6 mb-6 hidden-section">
+      <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">Days Before Countdown</h2>
+      <p class="text-gray-400">Event starts in <span id="countdown" class="text-green-400 font-bold">5</span> days!</p>
+    </section>
+
+    <section id="qrCodeSection" class="bg-gray-800 rounded-lg shadow-lg p-6 mb-6 hidden-section">
+      <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">QR Code</h2>
+      <div id="qrCode" class="w-40 h-40 mx-auto bg-gray-700 rounded-lg flex items-center justify-center">
+        <p class="text-gray-500 text-sm">No QR Code Yet</p>
+      </div>
+      <button id="generateQR" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-500">
+        Generate QR Code
+      </button>
+    </section>
+
+    <section id="teamsSection" class="bg-gray-800 rounded-lg shadow-lg p-6 hidden-section">
+      <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">Teams</h2>
+      <input
+        type="text"
+        id="teamName"
+        class="bg-gray-700 text-gray-300 border-none rounded-full px-4 py-2 w-full mb-4 focus:outline-none focus:ring-2 focus:ring-green-500"
+        placeholder="Enter team name"
+      />
+      <div class="flex gap-4">
+        <button id="createTeam" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500">Create Team</button>
+        <button id="joinTeam" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-500">Join Team</button>
+      </div>
+      <p id="teamStatus" class="text-blue-400 font-semibold mt-4 hidden">Team updated successfully!</p>
+    </section>
+  </main>
+
+  <script>
+    // Menu Toggle Logic
+    const sideMenu = document.getElementById('sideMenu');
+    const menuToggle = document.getElementById('menuToggle');
+    menuToggle.addEventListener('click', () => {
+      sideMenu.classList.toggle('-translate-x-full');
+    });
+
+    // Section Visibility Logic
+    const menuLinks = document.querySelectorAll('.menu-link');
+    const sections = document.querySelectorAll('section');
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Hide all sections
+        sections.forEach(section => section.classList.add('hidden-section'));
+
+        // Show the clicked section
+        const sectionId = link.getAttribute('data-section');
+        document.getElementById(sectionId).classList.remove('hidden-section');
+
+        // Close side menu on small screens
+        sideMenu.classList.add('-translate-x-full');
+      });
+    });
+  </script>
+</body>
+</html>

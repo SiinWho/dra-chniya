@@ -736,13 +736,132 @@
             </div>
         </div>
         <!----><!---->
-        <button onclick="showcontact();" class="border-none w-full">
+        <button onclick="showPopup();" class="border-none w-full" id="contactbtn">
             <div data-v-8daa8809="">
                 <div data-v-5122aac9="" data-v-8daa8809="" href="#" class="contactButton"><span
                         data-v-5122aac9="">CONTACT
                         US</span></div>
             </div>
         </button>
+        
+        <div id="popupBackground" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40"></div>
+
+<!-- Popup Form -->
+<div id="popupForm"  class="hidden flex fixed inset-0 z-50 justify-center items-center">
+    <div class="bg-gray-800 rounded-lg shadow-lg w-11/12 max-w-2xl p-8 text-white">
+        <div class="text-right">
+            <button onclick="closePopup();" class="text-gray-400 hover:text-gray-100 text-2xl">&times;</button>
+        </div>
+        <div id="top" >
+            <h2 class="text-2xl font-bold mb-6 text-center uppercase text-gray-100">Contact Us</h2>
+            <form class="grid grid-cols-2 gap-5 text-lg">
+                <div class="col-span-2 md:col-span-1">
+                    <input type="text" id="first_name" class="input" placeholder="First name" />
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <input type="text" id="last_name" class="input" placeholder="Last name" />
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <input type="email" id="email_address" class="input" placeholder="Email" />
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <input type="tel" id="phone_number" class="input" placeholder="Phone number" />
+                </div>
+                <div class="col-span-2">
+                    <textarea id="message" class="textarea" placeholder="Message"></textarea>
+                </div>
+                <div class="col-span-2 flex justify-center">
+                <button
+                type="button"
+                class="text-white hover:text-slate-800 font-semibold bg-slate-800 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-lg w-full sm:w-auto px-5 py-2.5 text-center col-span-2"
+                onclick="sendMessage()"
+              >
+                Send message
+              </button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showPopup() {
+        document.getElementById("popupBackground").classList.remove("hidden");
+        document.getElementById("popupForm").classList.remove("hidden");
+    }
+
+    function closePopup() {
+        document.getElementById("popupBackground").classList.add("hidden");
+        document.getElementById("popupForm").classList.add("hidden");
+    }
+</script>
+
+<style>
+
+
+    .input {
+        background-color: #2d2d2d;
+        border: 1px solid #444;
+        color: #fff;
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        width: 100%;
+    }
+
+    .input::placeholder {
+        color: #aaa;
+    }
+
+    .textarea {
+        background-color: #2d2d2d;
+        border: 1px solid #444;
+        color: #fff;
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        width: 100%;
+        height: 100px;
+    }
+
+    .textarea::placeholder {
+        color: #aaa;
+    }
+
+    .submit-button {
+        background-color: #444;
+        color: white;
+        border-radius: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+        background-color: #666;
+    }
+
+    #popupBackground {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bg-gray-800 {
+        background-color: #1f1f1f;
+    }
+
+    .text-gray-400 {
+        color: #b3b3b3;
+    }
+
+    .text-gray-100 {
+        color: #f5f5f5;
+    }
+</style>
+
         <!----><!---->
 
         <section id="nav1"
