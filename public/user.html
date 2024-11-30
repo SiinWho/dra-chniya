@@ -1,122 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    .hidden-section {
-      display: none;
-    }
-  </style>
-</head>
-<body class="bg-gray-900 text-gray-100 flex">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#0f0f0f] text-gray-100 flex">
+    <!-- Header Section -->
+    <header
+      class="bg-[#202020] absolute w-full h-16 flex items-center justify-between px-4"
+    >
+      <h1 class="text-gray-200 text-lg font-bold"></h1>
+      <a
+        href="profile.html"
+        class="text-gray-300 hover:text-white"
+        id="profileLink"
+      >
+        <img
+          src="./images/profile.jpg"
+          alt="Profile"
+          class="rounded-full h-10 w-10"
+        />
+      </a>
+      <div
+        id="dropdown"
+        class="hidden absolute right-4 top-16 bg-[#202020] rounded-lg shadow-lg"
+      >
+        <a href="index.html">
+          <button
+            class="tracking-widest uppercase px-6 py-2 text-red-600 hover:rounded-lg hover:bg-[#3c3c3c] hover:text-red-400 transition"
+          >
+            <i class="fa-regular fa-right-from-bracket pr-2"></i> Log-out
+          </button>
+        </a>
+      </div>
+    </header>
 
-  <!-- Side Menu -->
-  <aside id="sideMenu" class="bg-gray-800 w-64 h-screen fixed top-0 left-0 transform -translate-x-full transition-transform lg:translate-x-0 shadow-lg z-50">
-    <div class="text-center py-6 border-b border-gray-700">
-      <h1 class="text-2xl font-bold uppercase text-gray-100">Menu</h1>
-    </div>
-    <nav class="flex-grow flex flex-col">
-      <button class="menu-link px-6 py-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" data-section="paymentSection">
-        Payment Section
-      </button>
-      <button class="menu-link px-6 py-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" data-section="countdownSection">
-        Countdown
-      </button>
-      <button class="menu-link px-6 py-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" data-section="qrCodeSection">
-        QR Code
-      </button>
-      <button class="menu-link px-6 py-4 text-gray-300 hover:bg-gray-700 hover:text-white transition" data-section="teamsSection">
-        Teams
-      </button>
-    </nav>
-  </aside>
-
-  <!-- Toggle Button for Side Menu -->
-  <button id="menuToggle" class="lg:hidden flex top-4 left-4 bg-gray-800 text-gray-300 p-3 shadow-lg z-50 ">
-    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  d="M4 6h16M4 12h16m-7 6h7" />
-    </svg>
-  </button>
-
-  <!-- Main Content -->
-  <main class="ml-0 lg:ml-64 w-full min-h-screen p-6 transition-all">
-    <!-- Sections -->
-    <section id="paymentSection" class="bg-gray-800 rounded-lg shadow-lg p-6 mb-6 hidden-section">
-      <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">Payment Section</h2>
-      <p class="text-gray-400 mb-4">Select your payment method:</p>
-      <div class="flex gap-4">
-        <button id="payInPerson" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500">
-          Pay In-Person
+    <!-- Side Menu -->
+    <aside
+      id="sideMenu"
+      class="bg-[#202020] w-56 h-screen fixed top-0 left-0 transform -translate-x-full transition-transform lg:translate-x-0 z-50"
+    >
+      <div class="text-center px-6 pb-6 pt-3">
+        <div>
+          <img src="./images/dx.png" class="mx-auto lg:mx-0 h-14 w-14" alt="" />
+        </div>
+      </div>
+      <nav class="flex-grow flex flex-col">
+        <button
+          class="menu-link text-left tracking-widest uppercase px-6 py-4 text-gray-300 hover:bg-[#0f0f0f] hover:text-white transition"
+          data-section="paymentSection"
+        >
+          <i class="fa-regular fa-credit-card pr-2"></i>Payment
         </button>
-        <button id="payOnline" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-500">
-          Pay Online
+        <button
+          class="menu-link text-left tracking-widest uppercase px-6 py-4 text-gray-300 hover:bg-[#0f0f0f] hover:text-white transition"
+          data-section="workshopsSection"
+        >
+          <i class="fa-regular fa-graduation-cap"></i> Workshops
         </button>
-      </div>
-      <p id="paymentStatus" class="text-green-400 font-semibold mt-4 hidden">Payment Completed!</p>
-    </section>
+        <button
+          class="menu-link text-left tracking-widest uppercase px-6 py-4 text-gray-300 hover:bg-[#0f0f0f] hover:text-white transition"
+          data-section="qrCodeSection"
+        >
+          <i class="fa-regular fa-qrcode pr-2"></i> QR Code
+        </button>
+        <button
+          class="menu-link text-left tracking-widest uppercase px-6 py-4 text-gray-300 hover:bg-[#0f0f0f] hover:text-white transition"
+          data-section="teamsSection"
+        >
+          <i class="fa-regular fa-users pr-2"></i> Teams
+        </button>
+        <a href="index.html">
+          <button
+            class="menu-link text-left absolute w-full bottom-0 tracking-widest uppercase px-6 py-4 text-red-600 hover:bg-[#0f0f0f] hover:text-red-400 transition"
+          >
+            <i class="fa-regular fa-right-from-bracket pr-2"></i> Log-out
+          </button>
+        </a>
+      </nav>
+    </aside>
 
-    <section id="countdownSection" class="bg-gray-800 rounded-lg shadow-lg p-6 mb-6 hidden-section">
-      <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">Days Before Countdown</h2>
-      <p class="text-gray-400">Event starts in <span id="countdown" class="text-green-400 font-bold">5</span> days!</p>
-    </section>
+    <!-- Toggle Button for Side Menu -->
+    <button
+      id="menuToggle"
+      class="lg:hidden flex w-16 h-auto top-4 left-4 bg-[#202020] text-white p-3 z-50"
+    >
+      <svg
+        id="menuOpen"
+        class="w-8 h-8 absolute top-4 left-4"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+      <svg
+        id="menuClose"
+        class="hidden w-8 h-8 top-4 left-4 absolute"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
 
-    <section id="qrCodeSection" class="bg-gray-800 rounded-lg shadow-lg p-6 mb-6 hidden-section">
-      <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">QR Code</h2>
-      <div id="qrCode" class="w-40 h-40 mx-auto bg-gray-700 rounded-lg flex items-center justify-center">
-        <p class="text-gray-500 text-sm">No QR Code Yet</p>
-      </div>
-      <button id="generateQR" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-500">
-        Generate QR Code
-      </button>
-    </section>
+    <!-- Main Content -->
+    <main class="ml-0 pt-24 lg:ml-56 w-full min-h-screen p-6 transition-all">
+      <!-- Sections -->
+      <section
+        id="paymentSection"
+        class="bg-[#202020] rounded-lg shadow-lg p-6 mb-6 hidden"
+      >
+        <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">
+          Payment Section
+        </h2>
+        <p class="text-gray-400 mb-4">Select your payment method:</p>
+        <div class="flex gap-4">
+          <button
+            id="payInPerson"
+            class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500"
+          >
+            Pay In-Person
+          </button>
+          <button
+            id="payOnline"
+            class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-500"
+          >
+            Pay Online
+          </button>
+        </div>
+        <p id="paymentStatus" class="text-green-400 font-semibold mt-4 hidden">
+          Payment Completed!
+        </p>
+      </section>
 
-    <section id="teamsSection" class="bg-gray-800 rounded-lg shadow-lg p-6 hidden-section">
-      <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">Teams</h2>
-      <input
-        type="text"
-        id="teamName"
-        class="bg-gray-700 text-gray-300 border-none rounded-full px-4 py-2 w-full mb-4 focus:outline-none focus:ring-2 focus:ring-green-500"
-        placeholder="Enter team name"
-      />
-      <div class="flex gap-4">
-        <button id="createTeam" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500">Create Team</button>
-        <button id="joinTeam" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-500">Join Team</button>
-      </div>
-      <p id="teamStatus" class="text-blue-400 font-semibold mt-4 hidden">Team updated successfully!</p>
-    </section>
-  </main>
+      <section
+        id="workshopsSection"
+        class="bg-[#202020] rounded-lg shadow-lg p-6 mb-6 hidden"
+      >
+        <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">
+          Days Before Countdown
+        </h2>
+        <p class="text-gray-400">
+          Event starts in
+          <span id="countdown" class="text-green-400 font-bold">5</span> days!
+        </p>
+      </section>
 
-  <script>
-    // Menu Toggle Logic
-    const sideMenu = document.getElementById('sideMenu');
-    const menuToggle = document.getElementById('menuToggle');
-    menuToggle.addEventListener('click', () => {
-      sideMenu.classList.toggle('-translate-x-full');
-    });
+      <section
+        id="qrCodeSection"
+        class="bg-[#202020] rounded-lg shadow-lg p-6 mb-6 hidden"
+      >
+        <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">QR Code</h2>
+        <div
+          id="qrCode"
+          class="w-40 h-40 mx-auto bg-gray-700 rounded-lg flex items-center justify-center"
+        >
+          <p class="text-gray-500 text-sm">No QR Code Yet</p>
+        </div>
+        <button
+          id="generateQR"
+          class="mt-4 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-500"
+        >
+          Generate QR Code
+        </button>
+      </section>
 
-    // Section Visibility Logic
-    const menuLinks = document.querySelectorAll('.menu-link');
-    const sections = document.querySelectorAll('section');
+      <section
+        id="teamsSection"
+        class="bg-[#202020] rounded-lg shadow-lg p-6 hidden"
+      >
+        <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">Teams</h2>
+        <input
+          type="text"
+          id="teamName"
+          class="bg-gray-700 text-gray-300 border-none rounded-full px-4 py-2 w-full mb-4 focus:outline-none focus:ring-2 focus:ring-green-500"
+          placeholder="Enter team name"
+        />
+        <div class="flex gap-4">
+          <button
+            id="createTeam"
+            class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500"
+          >
+            Create Team
+          </button>
+          <button
+            id="joinTeam"
+            class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-500"
+          >
+            Join Team
+          </button>
+        </div>
+        <p id="teamStatus" class="text-blue-400 font-semibold mt-4 hidden">
+          Team updated successfully!
+        </p>
+      </section>
+    </main>
 
-    menuLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        // Hide all sections
-        sections.forEach(section => section.classList.add('hidden-section'));
-
-        // Show the clicked section
-        const sectionId = link.getAttribute('data-section');
-        document.getElementById(sectionId).classList.remove('hidden-section');
-
-        // Close side menu on small screens
-        sideMenu.classList.add('-translate-x-full');
+    <script>
+      // Menu Toggle Logic
+      const sideMenu = document.getElementById("sideMenu");
+      const menuToggle = document.getElementById("menuToggle");
+      const menuOpen = document.getElementById("menuOpen");
+      const menuClose = document.getElementById("menuClose");
+      menuToggle.addEventListener("click", () => {
+        sideMenu.classList.toggle("-translate-x-full");
+        menuToggle.classList.toggle("bg-opacity-0");
+        menuOpen.classList.toggle("hidden");
+        menuClose.classList.toggle("hidden");
       });
-    });
-  </script>
-</body>
+
+      // Section Visibility Logic
+      const menuLinks = document.querySelectorAll(".menu-link");
+      const sections = document.querySelectorAll("section");
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          // Hide all sections
+          sections.forEach((section) => section.classList.add("hidden"));
+
+          // Show the clicked section
+          const sectionId = link.getAttribute("data-section");
+          document.getElementById(sectionId).classList.remove("hidden");
+
+          // Close side menu on small screens
+          sideMenu.classList.add("-translate-x-full");
+          menuToggle.classList.toggle("bg-opacity-0");
+          menuOpen.classList.toggle("hidden");
+          menuClose.classList.toggle("hidden");
+        });
+      });
+
+      const profileLink = document.getElementById("profileLink");
+      const dropdown = document.getElementById("dropdown");
+
+      profileLink.addEventListener("click", (event) => {
+        event.preventDefault(); // Prevent default link behavior
+        dropdown.classList.toggle("hidden"); // Toggle dropdown visibility
+      });
+
+      // Close dropdown if clicked outside
+      window.addEventListener("click", (event) => {
+        if (
+          !profileLink.contains(event.target) &&
+          !dropdown.contains(event.target)
+        ) {
+          dropdown.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
 </html>

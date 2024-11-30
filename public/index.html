@@ -15,7 +15,7 @@
         setTimeout(function () {
             var element = document.getElementById("loader-wrapper");
             element.classList.add("hidden");;
-        }, 4010);
+        }, 10);
     </script>
 
 </head>
@@ -747,13 +747,13 @@
         <div id="popupBackground" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40"></div>
 
 <!-- Popup Form -->
-<div id="popupForm"  class="hidden flex fixed inset-0 z-50 justify-center items-center">
+<div id="popupForm"  class="hidden  fixed inset-0 z-50 justify-center items-center">
     <div class="bg-gray-800 rounded-lg shadow-lg w-11/12 max-w-2xl p-8 text-white">
         <div class="text-right">
             <button onclick="closePopup();" class="text-gray-400 hover:text-gray-100 text-2xl">&times;</button>
         </div>
-        <div id="top" >
-            <h2 class="text-2xl font-bold mb-6 text-center uppercase text-gray-100">Contact Us</h2>
+        <div id="top" style="font-family: 'Druk Wide Trial';" >
+            <h2 class="text-2xl font-bold mb-6 text-center uppercase text-gray-100" style="font-family: 'Druk Wide Trial';">Contact <span style="font-family: 'Druk Wide Trial';" class="italic ">Us</span></h2>
             <form class="grid grid-cols-2 gap-5 text-lg">
                 <div class="col-span-2 md:col-span-1">
                     <input type="text" id="first_name" class="input" placeholder="First name" />
@@ -767,17 +767,12 @@
                 <div class="col-span-2 md:col-span-1">
                     <input type="tel" id="phone_number" class="input" placeholder="Phone number" />
                 </div>
-                <div class="col-span-2">
-                    <textarea id="message" class="textarea" placeholder="Message"></textarea>
+                <div class="col-span-2 resize-none	">
+                    <textarea id="message" class="textarea resize-none" placeholder="Message"></textarea>
                 </div>
                 <div class="col-span-2 flex justify-center">
-                <button
-                type="button"
-                class="text-white hover:text-slate-800 font-semibold bg-slate-800 hover:bg-green-500 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-lg w-full sm:w-auto px-5 py-2.5 text-center col-span-2"
-                onclick="sendMessage()"
-              >
-                Send message
-              </button>
+                    <div data-v-8daa8809="" class="w-full mainButton"><button data-v-5122aac9="" data-v-8daa8809="" class="w-full mainButton"><span
+                        data-v-5122aac9="" class="w-full">Send</span></button></div>
                 </div>
                 
             </form>
@@ -789,6 +784,7 @@
     function showPopup() {
         document.getElementById("popupBackground").classList.remove("hidden");
         document.getElementById("popupForm").classList.remove("hidden");
+        document.getElementById("popupForm").classList.add("flex");
     }
 
     function closePopup() {
