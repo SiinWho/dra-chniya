@@ -14,7 +14,7 @@
   <body class="bg-[#1f1f1f] text-gray-100 flex">
     <!-- Header Section -->
     <header
-      class="bg-[#0f0f0f] absolute w-full h-16 flex items-center justify-between px-4"
+      class="bg-[#0f0f0f] fixed z-50 w-full h-16 flex items-center justify-between px-4"
     >
       <h1 class="text-gray-200 text-lg font-bold"></h1>
       <a
@@ -45,7 +45,7 @@
     <!-- Side Menu -->
     <aside
       id="sideMenu"
-      class="bg-[#0f0f0f] w-56 h-screen fixed top-0 left-0 transform -translate-x-full transition-transform lg:translate-x-0 z-50"
+      class="bg-[#0f0f0f] w-56 h-full fixed top-0 left-0 transform -translate-x-full transition-transform lg:translate-x-0 z-50"
     >
       <div class="text-center px-6 pb-6 pt-3">
         <div>
@@ -59,12 +59,7 @@
         >
           <i class="fa-regular fa-credit-card pr-2"></i>Payment
         </button>
-        <button
-          class="menu-link text-left tracking-widest uppercase px-6 py-4 text-gray-300 hover:bg-[#1f1f1f] hover:text-white transition"
-          data-section="workshopsSection"
-        >
-          <i class="fa-regular fa-circle-play pr-2"></i> Days Before Dx
-        </button>
+
         <button
           class="menu-link text-left tracking-widest uppercase px-6 py-4 text-gray-300 hover:bg-[#1f1f1f] hover:text-white transition"
           data-section="workshopsSection"
@@ -100,7 +95,7 @@
     >
       <svg
         id="menuOpen"
-        class="w-8 h-8 absolute top-4 left-4"
+        class="w-8 h-8 fixed top-4 left-4"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -114,7 +109,7 @@
       </svg>
       <svg
         id="menuClose"
-        class="hidden w-8 h-8 top-4 left-4 absolute"
+        class="hidden w-8 h-8 top-4 left-4 fixed"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -138,153 +133,312 @@
         <h2 class="text-xl font-bold mb-4 uppercase text-gray-200 text-center">
           Payment Section
         </h2>
-        <p class="text-gray-400 mb-4 text-center">Select your payment method:</p>
+        <p class="text-gray-400 mb-4 text-center">
+          Select your payment method:
+        </p>
         <center>
           <div id="payButtons">
-            <button id="payInPersonbtn" class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500 md:mr-4">
+            <button
+              id="payInPersonbtn"
+              class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500 md:mr-4"
+            >
               In-Person
             </button>
-            <button id="payOnlinebtn" class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500">
+            <button
+              id="payOnlinebtn"
+              class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500"
+            >
               Online
             </button>
-          </div></center>
-<div id="payInPersonfrm"
-    class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-0  scale-y-0 origin-top hidden"
-  >
-  <legend class="text-xl font-semibold mb-3 select-none">Choose One</legend>
-  <label
-    checked=""
-    name="status"
-    class="font-medium h-14 relative hover:bg-gray-400 hover:text-black flex items-center px-3 gap-3 rounded-lg has-[:checked]:text-black has-[:checked]:bg-blue-50 has-[:checked]:ring-black has-[:checked]:ring-1 select-none">
-    Bouba
-    <input
-      checked=""
-      type="radio"
-      name="status"
-      class="peer/html w-4 h-4 absolute accent-current right-3"
-      id="html"
-    />
-  </label>
-  <label
-    class="font-medium h-14 relative hover:bg-gray-400 hover:text-black flex items-center px-3 gap-3 rounded-lg has-[:checked]:text-black has-[:checked]:bg-blue-50 has-[:checked]:ring-black has-[:checked]:ring-1 select-none"
-  >
-    iSiin
-    <input
-      type="radio"
-      name="status"
-      class="w-4 h-4 absolute accent-current right-3"
-      id="css"
-    />
-  </label>
-  <label
-    for="javascript"
-    name="html"
-    class="font-medium h-14 relative hover:bg-gray-400 hover:text-black flex items-center px-3 gap-3 rounded-lg has-[:checked]:text-black has-[:checked]:bg-blue-50 has-[:checked]:ring-black has-[:checked]:ring-1 select-none">
-    Eya Jaoua
-    <input
-      type="radio"
-      name="status"
-      class="w-4 h-4 absolute accent-current right-3"
-      id="javascript"
-    />
-  </label>
-  <div class="text-center">
-  <button
-    type="submit"
-    class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500 mt-4">
-    Confirm
-  </button>
-</div>
-</div>
+          </div>
+        </center>
+        <div
+          id="payInPersonfrm"
+          class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-0 scale-y-0 origin-top hidden"
+        >
+          <legend class="text-xl font-semibold mb-3 select-none">
+            Choose One
+          </legend>
+          <label
+            checked=""
+            name="status"
+            class="font-medium h-14 relative hover:bg-gray-400 hover:text-black flex items-center px-3 gap-3 rounded-lg has-[:checked]:text-black has-[:checked]:bg-blue-50 has-[:checked]:ring-black has-[:checked]:ring-1 select-none"
+          >
+            Bouba
+            <input
+              checked=""
+              type="radio"
+              name="status"
+              class="peer/html w-4 h-4 absolute accent-current right-3"
+              id="html"
+            />
+          </label>
+          <label
+            class="font-medium h-14 relative hover:bg-gray-400 hover:text-black flex items-center px-3 gap-3 rounded-lg has-[:checked]:text-black has-[:checked]:bg-blue-50 has-[:checked]:ring-black has-[:checked]:ring-1 select-none"
+          >
+            iSiin
+            <input
+              type="radio"
+              name="status"
+              class="w-4 h-4 absolute accent-current right-3"
+              id="css"
+            />
+          </label>
+          <label
+            for="javascript"
+            name="html"
+            class="font-medium h-14 relative hover:bg-gray-400 hover:text-black flex items-center px-3 gap-3 rounded-lg has-[:checked]:text-black has-[:checked]:bg-blue-50 has-[:checked]:ring-black has-[:checked]:ring-1 select-none"
+          >
+            Eya Jaoua
+            <input
+              type="radio"
+              name="status"
+              class="w-4 h-4 absolute accent-current right-3"
+              id="javascript"
+            />
+          </label>
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500 mt-4"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
 
+        <div
+          id="payOnlinefrm"
+          class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-300 transform scale-y-0 origin-top hidden"
+        >
+          <h3 class="text-xl font-semibold mb-3 text-gray-300">
+            Online Payment
+          </h3>
+          <form id="onlinePaymentForm">
+            <div class="mb-4">
+              <label
+                for="cardName"
+                class="block text-sm font-medium text-gray-300"
+              >
+                Name on Card
+              </label>
+              <input
+                type="text"
+                id="cardName"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="Enter Name"
+              />
+            </div>
+            <div class="mb-4">
+              <label
+                for="cardNumber"
+                class="block text-sm font-medium text-gray-300"
+              >
+                Card Number
+              </label>
+              <input
+                type="text"
+                id="cardNumber"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="1234 5678 9101 1121"
+              />
+            </div>
+            <div class="mb-4 grid grid-cols-2 gap-4">
+              <div>
+                <label
+                  for="expiryDate"
+                  class="block text-sm font-medium text-gray-300"
+                >
+                  Expiry Date
+                </label>
+                <input
+                  type="text"
+                  id="expiryDate"
+                  class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                  placeholder="MM/YY"
+                />
+              </div>
+              <div>
+                <label
+                  for="cvv"
+                  class="block text-sm font-medium text-gray-300"
+                >
+                  CVV
+                </label>
+                <input
+                  type="text"
+                  id="cvv"
+                  class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                  placeholder="123"
+                />
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500 mt-4"
+              >
+                Confirm Payment
+              </button>
+            </div>
+          </form>
+        </div>
 
-<div
-  id="payOnlinefrm"
-  class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-300 transform scale-y-0 origin-top hidden"
->
-  <h3 class="text-xl font-semibold mb-3 text-gray-300">Online Payment</h3>
-  <form id="onlinePaymentForm">
-    <div class="mb-4">
-      <label for="cardName" class="block text-sm font-medium text-gray-300">
-        Name on Card
-      </label>
-      <input
-        type="text"
-        id="cardName"
-        class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-        placeholder="Enter Name"
-      />
-    </div>
-    <div class="mb-4">
-      <label for="cardNumber" class="block text-sm font-medium text-gray-300">
-        Card Number
-      </label>
-      <input
-        type="text"
-        id="cardNumber"
-        class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-        placeholder="1234 5678 9101 1121"
-      />
-    </div>
-    <div class="mb-4 grid grid-cols-2 gap-4">
-      <div>
-        <label for="expiryDate" class="block text-sm font-medium text-gray-300">
-          Expiry Date
-        </label>
-        <input
-          type="text"
-          id="expiryDate"
-          class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-          placeholder="MM/YY"
-        />
-      </div>
-      <div>
-        <label for="cvv" class="block text-sm font-medium text-gray-300">
-          CVV
-        </label>
-        <input
-          type="text"
-          id="cvv"
-          class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-          placeholder="123"
-        />
-      </div>
-    </div>
-    <div class="text-center">
-      <button
-    type="submit"
-    class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500 mt-4">
-    Confirm Payment
-  </button>
-    </div>
-  </form>
-</div>
-
-
-        
         <p id="paymentStatus" class="text-green-400 font-semibold mt-4 hidden">
           Payment Completed!
         </p>
       </section>
-
       <section
         id="workshopsSection"
-        class="bg-[#0f0f0f] rounded-lg shadow-lg p-6 mb-6 hidden"
+        class="bg-[#0f0f0f] pb-12 rounded-lg shadow-lg p-6 mb-6 hidden"
       >
-        <h2 class="text-xl font-bold mb-4 uppercase text-gray-200">
-          Days Before Countdown
+        <h2 class="text-center text-2xl font-bold mb-4 uppercase text-gray-200">
+          Workshops
         </h2>
-        <p class="text-gray-400">
-          Event starts in
-          <span id="countdown" class="text-green-400 font-bold">5</span> days!
-        </p>
-      </section>
+        <div class="mt-6 flex items-start justify-center h-auto">
+          <div
+            class="mt-4 flex flex-wrap justify-center gap-6 md:flex-row flex-col w-full"
+          >
+            <div
+              class="relative flex w-full md:w-2/6 flex-col rounded-xl bg-gradient-to-br bg-[#1f1f1f] bg-clip-border text-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 mb-4"
+            >
+              <div
+                class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-clip-border shadow-lg group"
+              >
+                <!-- Card Content -->
+                <img
+                  src="./images/workshop1.jpg"
+                  class="w-full h-full"
+                  alt=""
+                />
+              </div>
+              <div class="p-8">
+                <h5
+                  class="mb-2 text-xl font-semibold leading-snug text-gray-200"
+                >
+                  Data Defense 101
+                </h5>
+                <p class="text-base text-gray-300">
+                  Topic: How to Protect Your Personal Data and Avoid Common
+                  Cyber Threats.
+                </p>
+              </div>
+              <div class="p-8 pt-0">
+                <button
+                  class="w-full px-6 py-3 text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg hover:from-blue-700 hover:to-blue-600"
+                >
+                  Join
+                </button>
+              </div>
+            </div>
 
+            <!-- Repeat the other cards with similar structure -->
+            <div
+              class="relative flex w-full md:w-2/6 flex-col rounded-xl bg-gradient-to-br bg-[#1f1f1f] bg-clip-border text-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 mb-4"
+            >
+              <div
+                class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-clip-border shadow-lg group"
+              >
+                <!-- Card Content -->
+                <img
+                  src="./images/workshop2.webp"
+                  class="w-full h-full"
+                  alt=""
+                />
+              </div>
+              <div class="p-8">
+                <h5
+                  class="mb-2 text-xl font-semibold leading-snug text-gray-200"
+                >
+                  NFTs: Beyond the Hype
+                </h5>
+                <p class="text-base text-gray-300">
+                  Topic: Understanding NFTs and Creating a Simple Digital Asset.
+                </p>
+              </div>
+              <div class="p-8 pt-0">
+                <button
+                  class="w-full px-6 py-3 text-white bg-gray-500 rounded-lg cursor-not-allowed"
+                >
+                  Unable To Join
+                </button>
+              </div>
+            </div>
+
+            <!-- Repeat for other cards as well -->
+            <div
+              class="relative flex w-full md:w-2/6 flex-col rounded-xl bg-gradient-to-br bg-[#1f1f1f] bg-clip-border text-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 mb-4"
+            >
+              <div
+                class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-clip-border shadow-lg group"
+              >
+                <!-- Card Content -->
+                <img
+                  src="./images/workshop3.jpg"
+                  class="w-full h-full"
+                  alt=""
+                />
+              </div>
+              <div class="p-8">
+                <h5
+                  class="mb-2 text-xl font-semibold leading-snug text-gray-200"
+                >
+                  The Internet of Everything
+                </h5>
+                <p class="text-base text-gray-300">
+                  Topic: IoT Applications in Everyday Life and Future Trends.
+                </p>
+              </div>
+              <div class="p-8 pt-0">
+                <button
+                  class="w-full px-6 py-3 text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg hover:from-blue-700 hover:to-blue-600"
+                >
+                  Join
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="relative flex w-full md:w-2/6 flex-col rounded-xl bg-gradient-to-br bg-[#1f1f1f] bg-clip-border text-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 mb-4"
+            >
+              <div
+                class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-clip-border shadow-lg group"
+              >
+                <!-- Card Content -->
+                <img
+                  src="./images/workshop4.jpg"
+                  class="w-full h-full"
+                  alt=""
+                />
+              </div>
+              <div class="p-8">
+                <h5
+                  class="mb-2 text-xl font-semibold leading-snug text-gray-200"
+                >
+                  Build Your AI Bot!
+                </h5>
+                <p class="text-base text-gray-300">
+                  Topic: Creating a Simple Chatbot with Python and OpenAI APIs.
+                </p>
+              </div>
+              <div class="p-8 pt-0">
+                <button
+                  class="w-full px-6 py-3 text-white bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg hover:from-blue-700 hover:to-blue-600"
+                >
+                  Join
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section
         id="qrCodeSection"
         class="bg-[#0f0f0f] rounded-lg shadow-lg p-6 mb-6 hidden"
       >
-        <h2 class="text-xl font-bold mb-4 uppercase text-center text-gray-200">QR Code</h2>
+        <h2 class="text-xl font-bold mb-4 uppercase text-center text-gray-200">
+          QR Code
+        </h2>
         <div
           id="qrCode"
           class="w-40 h-40 mx-auto bg-[#1f1f1f] rounded-lg flex items-center justify-center"
@@ -292,87 +446,98 @@
           <p class="text-gray-500 text-sm">No QR Code Yet</p>
         </div>
         <center>
-        <button
-          id="generateQR"
-          class="bg-black mt-4 text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500"
-        >
-          Generate QR Code
-        </button></center>
+          <button
+            id="generateQR"
+            class="bg-black mt-4 text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500"
+          >
+            Generate QR Code
+          </button>
+        </center>
       </section>
       <section
         id="teamsSection"
         class="bg-[#0f0f0f] rounded-lg shadow-lg p-6 mb-6 hidden"
       >
-        <h2 class="text-xl font-bold mb-4 uppercase text-gray-200 text-center ">Teams</h2>
+        <h2 class="text-xl font-bold mb-4 uppercase text-gray-200 text-center">
+          Teams
+        </h2>
         <center>
-        
-        <div id="teamButtons">
-          <button id="createTeam" class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500 md:mr-4">
-            Create Team
-          </button>
-          <button id="joinTeam" class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500">
-            Join Team
-          </button>
-        </div></center>
+          <div id="teamButtons">
+            <button
+              id="createTeam"
+              class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500 md:mr-4"
+            >
+              Create Team
+            </button>
+            <button
+              id="joinTeam"
+              class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500"
+            >
+              Join Team
+            </button>
+          </div>
+        </center>
         <div
-    id="teamCreationForm"
-    class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-300 transform scale-y-0 origin-top hidden"
-  >
-    <h3 class="text-lg font-semibold text-gray-200 mb-3 text-center">
-      Create Your Team
-    </h3>
-    <form id="teamForm">
-      <div class="mb-4">
-        <label
-          for="teamName"
-          class="block text-base font-medium text-gray-300"
+          id="teamCreationForm"
+          class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-300 transform scale-y-0 origin-top hidden"
         >
-          Team Name
-        </label>
-        <input
-          type="text"
-          id="teamName"
-          class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-          placeholder="Enter Team Name"
-        />
-      </div>
+          <h3 class="text-lg font-semibold text-gray-200 mb-3 text-center">
+            Create Your Team
+          </h3>
+          <form id="teamForm">
+            <div class="mb-4">
+              <label
+                for="teamName"
+                class="block text-base font-medium text-gray-300"
+              >
+                Team Name
+              </label>
+              <input
+                type="text"
+                id="teamName"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="Enter Team Name"
+              />
+            </div>
 
-      <div class="mb-4">
-        <label
-          for="teamDescription"
-          class="block text-base font-medium text-gray-300"
-        >
-          Team Description
-        </label>
-        <textarea
-          id="teamDescription"
-          class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-          placeholder="Describe your team..."
-        ></textarea>
-      </div>
-      <div class="mb-4">
-        <label
-          for="teamMembers"
-          class="block text-base font-medium text-gray-300"
-        >
-          Add Members
-        </label>
-        <input
-          type="text"
-          id="teamMembers"
-          class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-          placeholder="example@example.com"
-        />
-      </div>
-      <div class="text-center">
-        <button
-          type="submit"
-          class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500" onclick="newTeam()">
-          Submit
-        </button>
-      </div>
-    </form>
-  </div>
+            <div class="mb-4">
+              <label
+                for="teamDescription"
+                class="block text-base font-medium text-gray-300"
+              >
+                Team Description
+              </label>
+              <textarea
+                id="teamDescription"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="Describe your team..."
+              ></textarea>
+            </div>
+            <div class="mb-4">
+              <label
+                for="teamMembers"
+                class="block text-base font-medium text-gray-300"
+              >
+                Add Members
+              </label>
+              <input
+                type="text"
+                id="teamMembers"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="example@example.com"
+              />
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500"
+                onclick="newTeam()"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
 
@@ -438,11 +603,9 @@
           teamCreationForm.classList.remove("hidden", "scale-y-0");
         } else {
           teamCreationForm.classList.add("scale-y-0");
-          setTimeout(() => teamCreationForm.classList.add("hidden"), 300); 
+          setTimeout(() => teamCreationForm.classList.add("hidden"), 300);
         }
       });
-
-
 
       const payInPersonbtn = document.getElementById("payInPersonbtn");
       const payOnlinebtn = document.getElementById("payOnlinebtn");
@@ -471,8 +634,6 @@
       payOnlinebtn.addEventListener("click", () => {
         toggleForm(payOnlinefrm, payInPersonfrm);
       });
-
-
     </script>
   </body>
 </html>
