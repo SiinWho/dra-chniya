@@ -14,9 +14,45 @@
   <body class="bg-[#1f1f1f] text-gray-100 flex">
     <!-- Header Section -->
     <header
-      class="bg-[#0f0f0f] fixed z-50 w-full h-16 flex items-center justify-between px-4"
+      class="bg-[#0f0f0f] fixed z-40 w-full h-16 flex items-center justify-between px-4"
     >
-      <h1 class="text-gray-200 text-lg font-bold"></h1>
+      <h1>
+        <button
+          id="menuToggle"
+          class="lg:hidden flex w-16 h-auto top-4 left-4 bg-[#0f0f0f] text-white p-3"
+          style="z-index: 60"
+        >
+          <svg
+            id="menuOpen"
+            class="w-8 h-8 fixed top-4 left-4"
+            style="z-index: 60"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+          <svg
+            id="menuClose"
+            style="z-index: 60"
+            class="hidden w-8 h-8 top-4 left-4 fixed"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </h1>
       <a
         href="profile.html"
         class="text-gray-300 hover:text-white"
@@ -45,11 +81,11 @@
     <!-- Side Menu -->
     <aside
       id="sideMenu"
-      class="bg-[#0f0f0f] w-56 h-full fixed top-0 left-0 transform -translate-x-full transition-transform lg:translate-x-0 z-50"
+      class="bg-[#0f0f0f] w-56 h-full fixed top-0 left-0 transform -translate-x-full transition-transform lg:translate-x-0 z-40"
     >
-      <div class="text-center px-6 pb-6 pt-3">
-        <div>
-          <img src="./images/dx.png" class="mx-auto h-14 w-14" alt="" />
+      <div class="text-center px-6 pb-6 pt-3 z-50">
+        <div class="z-50">
+          <img src="./images/dx.png" class="mx-auto h-14 w-14 z-50" alt="" />
         </div>
       </div>
       <nav class="flex-grow flex flex-col">
@@ -89,38 +125,6 @@
     </aside>
 
     <!-- Toggle Button for Side Menu -->
-    <button
-      id="menuToggle"
-      class="lg:hidden flex w-16 h-auto top-4 left-4 bg-[#0f0f0f] text-white p-3 z-50"
-    >
-      <svg
-        id="menuOpen"
-        class="w-8 h-8 fixed top-4 left-4"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16m-7 6h7"
-        />
-      </svg>
-      <svg
-        id="menuClose"
-        class="hidden w-8 h-8 top-4 left-4 fixed"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-          clip-rule="evenodd"
-        ></path>
-      </svg>
-    </button>
 
     <!-- Main Content -->
     <main class="ml-0 pt-24 lg:ml-56 w-full min-h-screen p-6 transition-all">
@@ -290,7 +294,7 @@
       </section>
       <section
         id="workshopsSection"
-        class="bg-[#0f0f0f] pb-12 rounded-lg shadow-lg p-6 mb-6 hidden"
+        class="bg-[#0f0f0f] rounded-lg shadow-lg p-6 mb-6 hidden"
       >
         <h2 class="text-center text-2xl font-bold mb-4 uppercase text-gray-200">
           Workshops
