@@ -497,24 +497,20 @@
           id="qrCode"
           class="w-40 h-40 mx-auto bg-[#1f1f1f] rounded-lg flex items-center justify-center"
         >
-          <p class="text-gray-500 text-sm">No QR Code Yet</p>
+          <p class="text-gray-500 text-center text-base">QR Code Will Appear Once Payment Is Completed</p>
         </div>
-        <center>
-        <button
-          id="generateQR"
-          class="bg-black transition-all duration-500 mt-4 text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500"
-        >
-          Generate QR Code
-        </button></center>
+        
       </section>
       <!-- Teams section -->
       <section
         id="teamsSection"
         class="bg-[#0f0f0f] rounded-lg shadow-lg p-6 mb-6 hidden"
       >
+      <div id="TeamDefault">
       <h2 class="text-center text-2xl font-bold mb-4 uppercase text-gray-200">
         Teams
       </h2>
+      
         <center>
           <div id="teamButtons">
             <button id="createTeam" class="bg-black transition-all duration-500 text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500 md:mr-4">
@@ -623,7 +619,23 @@
             </div>
           </form>
         </div>
-        
+      </div>
+        <div class="YourTeam hidden">
+          <h2 class="text-center text-2xl font-bold mb-4 uppercase text-gray-200">
+            Your Team
+          </h2>
+          <div class="flex flex-col items-center justify-center">
+            <h3 class="text-lg font-semibold text-gray-200 mb-3 text-center">Team Name: <span id="teamNameCreated"></span></h3>
+            <h3 class="text-lg font-semibold text-gray-200 mb-3 text-center">Team Leader: <span id="teamLeaderCreated"></span></h3>
+<div class="flex flex-col items-center justify-center">
+  <h3 class="text-lg font-semibold text-gray-200 mb-3 text-center">Team Members:</h3>
+  <ul id="teamMembersList" class="text-base text-gray-300 mb-2">
+    <li><span id="member1"></span></li>
+    <li><span id="member2"></span></li>
+  </ul>
+</div>
+          </div>
+        </div>
       </section>
     </main>
 
