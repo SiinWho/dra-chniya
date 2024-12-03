@@ -94,51 +94,82 @@
     </div>
 
     <header class="bg-[#0F0F0F] z-40">
-      <section id="nav1"
-          class="text-xl flex justify-between items-center pt-2 px-6 md:px-20 w-[100%] duration-500 mx-auto">
-          <div>
-              <img class="relative z-40 duration-500 p-3 w-20 cursor-pointer" id="logo-img" src="./images/dx.png"
-                  alt="..." />
-          </div>
+      <section
+        id="nav1"
+        class="text-xl flex justify-between items-center pt-2 px-6 md:px-20 w-[100%] duration-500 mx-auto"
+      >
+        <div>
+          <img
+            class="relative z-40 duration-500 p-3 w-20 cursor-pointer"
+            id="logo-img"
+            src="./images/dx.png"
+            alt="..."
+          />
+        </div>
+        <div
+          class="nav-links duration-500 md:static absolute bg-[#0F0F0F] md:min-h-fit min-h-[60vh] left-0 top-[-600%] md:w-auto w-full flex items-center px-5"
+        >
+          <ul
+            class="text-white flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+          >
+            <li>
+              <a
+                href="./index.html"
+                class="relative cursor-pointer w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+              >
+                HOME
+              </a>
+            </li>
+            <li>
+              <a
+                href="./agenda.html"
+                class="relative cursor-pointer w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+              >
+                AGENDA
+              </a>
+            </li>
+            <li>
+              <a
+                href="./speakers.html"
+                class="relative cursor-pointer w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+              >
+                SPEAKERS
+              </a>
+            </li>
+            <li>
+              <a
+                href="./daysbefore.html"
+                class="relative cursor-pointer w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
+              >
+                DAYS BEFORE DX
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex cursor-pointer items-center gap-6">
           <div
-              class="nav-links duration-500 md:static absolute bg-[#0F0F0F] md:min-h-fit min-h-[60vh] left-0 top-[-600%] md:w-auto w-full flex items-center px-5">
-              <ul class="text-white flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-                  <li>
-                      <a href="./index.html"
-                          class="relative cursor-pointer w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                          HOME
-                      </a>
-                  </li>
-                  <li>
-                      <a href="./agenda.html"
-                          class="relative cursor-pointer w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                          AGENDA
-                      </a>
-                  </li>
-                  <li>
-                      <a href="./speakers.html"
-                          class="relative cursor-pointer w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                          SPEAKERS
-                      </a>
-                  </li>
-              </ul>
+            class="relative cursor-pointer inline-flex max-md:scale-75 group"
+          >
+            <div
+              class="absolute cursor-pointer inset-0 duration-1000 scale-90 -mr-10 md:mr-0 opacity-60 transitiona-all bg-gradient-to-r from-[#D62C9D] via-[#E9E9E9] to-[#5DD62C] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"
+            ></div>
+            <a
+              href="./signup.html"
+              title="Sign Up"
+              class="group cursor-pointer relative inline-flex scale-90 -mr-10 md:mr-0 items-center bg-[#0F0F0F] justify-center rounded-xl bg[] px-8 py-3 text-white transition-all duration-200 hover:bg-[#0F0F0F] hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
+              role="button"
+              >JOIN DX
+            </a>
           </div>
-          <div class="flex cursor-pointer items-center gap-6">
-              <div class="relative cursor-pointer inline-flex max-md:scale-75 group">
-                  <div
-                      class="absolute cursor-pointer inset-0 duration-1000 scale-90 -mr-10 md:mr-0 opacity-60 transitiona-all bg-gradient-to-r from-[#D62C9D] via-[#E9E9E9] to-[#5DD62C] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200">
-                  </div>
-                  <a href="./signup.html" title="Sign Up"
-                      class="group cursor-pointer relative inline-flex scale-90 -mr-10 md:mr-0 items-center bg-[#0F0F0F] justify-center rounded-xl bg[] px-8 py-3 text-white transition-all duration-200 hover:bg-[#0F0F0F] hover:shadow-lg hover:-translate-y-0.5 hover:shadow-gray-600/30"
-                      role="button">SIGN UP
-                  </a>
-              </div>
 
-              <ion-icon onclick="onToggleMenu(this)" name="menu"
-                  class="text-white text-3xl relative z-40 cursor-pointer md:hidden"></ion-icon>
-          </div>
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-white text-3xl relative z-40 cursor-pointer md:hidden"
+          ></ion-icon>
+        </div>
       </section>
-  </header>
+    </header>
 
     <script>
       const navLinks = document.querySelector(".nav-links");
@@ -156,7 +187,10 @@
         <span style="font-family: 'Druk Wide Trial'" class="font-black"
           >MEET </span
         ><span style="font-family: 'Druk Cond Trial'">THE</span
-        ><span class="italic font-bold"> <span style="font-family: 'Druk Text Wide Trial'"><br>DX </span> <span>SPE</span>AKERS</span>
+        ><span class="italic font-bold">
+          <span style="font-family: 'Druk Text Wide Trial'"><br />DX </span>
+          <span>SPE</span>AKERS</span
+        >
       </div>
       <div data-v-8daa8809="" class="speakerList">
         <div
@@ -874,7 +908,7 @@
         </div>
       </div>
       <!----><!---->
-      <button onclick="showcontact();" class="border-none w-full">
+      <button onclick="showPopup();" class="border-none w-full" id="contactbtn">
         <div data-v-8daa8809="">
           <div
             data-v-5122aac9=""
@@ -886,6 +920,170 @@
           </div>
         </div>
       </button>
+
+      <div
+        id="popupBackground"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40"
+      ></div>
+
+      <!-- Popup Form -->
+      <div
+        id="popupForm"
+        class="hidden fixed inset-0 z-50 justify-center items-center"
+      >
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg w-11/12 max-w-2xl p-8 text-white"
+        >
+          <div class="text-right">
+            <button
+              onclick="closePopup();"
+              class="text-gray-400 hover:text-gray-100 text-2xl"
+            >
+              &times;
+            </button>
+          </div>
+          <div id="top" style="font-family: 'Druk Wide Trial'">
+            <h2
+              class="text-2xl font-bold mb-6 text-center uppercase text-gray-100"
+              style="font-family: 'Druk Wide Trial'"
+            >
+              Contact
+              <span style="font-family: 'Druk Wide Trial'" class="italic"
+                >Us</span
+              >
+            </h2>
+            <form class="grid grid-cols-2 gap-5 text-lg">
+              <div class="col-span-2 md:col-span-1">
+                <input
+                  type="text"
+                  id="first_name"
+                  class="input"
+                  placeholder="First name"
+                />
+              </div>
+              <div class="col-span-2 md:col-span-1">
+                <input
+                  type="text"
+                  id="last_name"
+                  class="input"
+                  placeholder="Last name"
+                />
+              </div>
+              <div class="col-span-2 md:col-span-1">
+                <input
+                  type="email"
+                  id="email_address"
+                  class="input"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="col-span-2 md:col-span-1">
+                <input
+                  type="tel"
+                  id="phone_number"
+                  class="input"
+                  placeholder="Phone number"
+                />
+              </div>
+              <div class="col-span-2 resize-none">
+                <textarea
+                  id="message"
+                  class="textarea resize-none"
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="col-span-2 flex justify-center">
+                <div data-v-8daa8809="" class="w-full mainButton">
+                  <button
+                    data-v-5122aac9=""
+                    data-v-8daa8809=""
+                    class="w-full mainButton"
+                  >
+                    <span data-v-5122aac9="" class="w-full">Send</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function showPopup() {
+          document.getElementById("popupBackground").classList.remove("hidden");
+          document.getElementById("popupForm").classList.remove("hidden");
+          document.getElementById("popupForm").classList.add("flex");
+        }
+
+        function closePopup() {
+          document.getElementById("popupBackground").classList.add("hidden");
+          document.getElementById("popupForm").classList.add("hidden");
+        }
+      </script>
+
+      <style>
+        .input {
+          background-color: #2d2d2d;
+          border: 1px solid #444;
+          color: #fff;
+          border-radius: 0.5rem;
+          padding: 0.75rem;
+          width: 100%;
+        }
+
+        .input::placeholder {
+          color: #aaa;
+        }
+
+        .textarea {
+          background-color: #2d2d2d;
+          border: 1px solid #444;
+          color: #fff;
+          border-radius: 0.5rem;
+          padding: 0.75rem;
+          width: 100%;
+          height: 100px;
+        }
+
+        .textarea::placeholder {
+          color: #aaa;
+        }
+
+        .submit-button {
+          background-color: #444;
+          color: white;
+          border-radius: 0.5rem;
+          padding: 0.75rem 1.5rem;
+          text-align: center;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+          background-color: #666;
+        }
+
+        #popupBackground {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .bg-gray-800 {
+          background-color: #1f1f1f;
+        }
+
+        .text-gray-400 {
+          color: #b3b3b3;
+        }
+
+        .text-gray-100 {
+          color: #f5f5f5;
+        }
+      </style>
+
       <!----><!---->
 
       <section
