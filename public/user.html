@@ -148,120 +148,112 @@
               Online
             </button>
           </div></center>
-<div id="payInPersonfrm"
-    class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-0  scale-y-0 origin-top hidden"
-  >
-  <legend class="text-xl font-semibold mb-3 select-none">Choose One</legend>
-  <label
-    checked=""
-    name="status"
-    class="font-medium h-14 relative hover:bg-gray-400 hover:text-black flex items-center px-3 gap-3 rounded-lg has-[:checked]:text-black has-[:checked]:bg-blue-50 has-[:checked]:ring-black has-[:checked]:ring-1 select-none">
-    Bouba
-    <input
-      checked=""
-      type="radio"
-      name="status"
-      class="peer/html w-4 h-4 absolute accent-current right-3"
-      id="html"
-    />
-  </label>
-  <label
-    class="font-medium h-14 relative hover:bg-gray-400 hover:text-black flex items-center px-3 gap-3 rounded-lg has-[:checked]:text-black has-[:checked]:bg-blue-50 has-[:checked]:ring-black has-[:checked]:ring-1 select-none"
-  >
-    iSiin
-    <input
-      type="radio"
-      name="status"
-      class="w-4 h-4 absolute accent-current right-3"
-      id="css"
-    />
-  </label>
-  <label
-    for="javascript"
-    name="html"
-    class="font-medium h-14 relative hover:bg-gray-400 hover:text-black flex items-center px-3 gap-3 rounded-lg has-[:checked]:text-black has-[:checked]:bg-blue-50 has-[:checked]:ring-black has-[:checked]:ring-1 select-none">
-    Eya Jaoua
-    <input
-      type="radio"
-      name="status"
-      class="w-4 h-4 absolute accent-current right-3"
-      id="javascript"
-    />
-  </label>
-  <div class="text-center">
-  <button
-    type="submit"
-    class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500 mt-4">
-    Confirm
-  </button>
-</div>
-</div>
+          <div id="payInPersonfrm" class="mt-4 rounded-lg shadow-md p-4 hidden scale-y-0 origin-top">
+            <legend class="text-xl font-semibold mb-3">Our Ambassadors</legend>
+            <label
+              class="font-medium relative hover:bg-gray-200 hover:text-black flex flex-col px-3 py-2 gap-2 rounded-lg select-none">
+              <span>Bouba</span><p>ISIMS</p>
+              <div class="details hover:bg-gray-200 hover:text-black text-sm hidden">
+                <p>Email: example@example.com</p>
+                <p>Number: I HAVE A BOYFRIEND</p>
+              </div>
+              <input
+                type="radio"
+                name="status"
+                class="absolute w-4 h-4 top-7 right-3 accent-current"
+                onclick="toggleDetails(this)" />
+            </label>
+            <label
+              class="font-medium relative hover:bg-gray-200 hover:text-black flex flex-col px-3 py-2 gap-2 rounded-lg select-none">
+              <span>iSiin</span><p>ISIMS</p>
+              <div class="details hover:bg-gray-200 hover:text-black text-sm hidden">
+                <p>Email: example@example.com</p>
+                <p>Number: 987-654-3210</p>
+              </div>
+              <input
+                type="radio"
+                name="status"
+                class="absolute w-4 h-4 top-7 right-3 accent-current"
+                onclick="toggleDetails(this)" />
+            </label>
+            <label
+              class="font-medium relative hover:bg-gray-200 hover:text-black flex flex-col px-3 py-2 gap-2 rounded-lg select-none">
+              <span>Eya Jaoua</span><p>ISIMS</p>
+              <div class="details hover:bg-gray-200 hover:text-black text-sm hidden">
+                <p>Email: exapmle@example.com</p>
+                <p>Number: 654-321-0987</p>
+              </div>
+              <input
+                type="radio"
+                name="status"
+                class="absolute w-4 h-4 top-7 right-3 accent-current"
+                onclick="toggleDetails(this)" />
+            </label>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500 mt-4">
+                Confirm
+              </button>
+            </div>
+          </div>
+          
+          <!-- D17 payment -->
+          <div id="payOnlinefrm" class="mt-4 rounded-lg shadow-md p-4 hidden scale-y-0 origin-top">
+            <legend class="text-xl font-semibold mb-3">Online Options</legend>
+            <div class="flex justify-between gap-4">
+              <label class="w-1/2 bg-gray-200 p-4 rounded-lg flex flex-col gap-2 hover:bg-gray-300 hover:cursor-pointer">
+                <div class="flex justify-between items-center">
+                  <div class="text-gray-700 text-sm font-semibold">
+                    <span class="block text-lg font-medium text-black">D17</span>
+                    <p>Phone: +21699999999</p>
+                  </div>
+                  <input
+                    type="radio"
+                    name="status"
+                    class="w-4 h-4 accent-current"
+                    onclick="toggleDetails(this)"
+                  />
+                </div>
+              </label>
 
+              <!-- Bank payment -->
+              <label class="w-1/2 bg-gray-200 p-4 rounded-lg flex flex-col gap-2 hover:bg-gray-300 hover:cursor-pointer">
+                <div class="flex justify-between items-center">
+                  <div class="text-gray-700 text-sm font-semibold">
+                    <span class="block text-lg font-medium text-black">BANK PAYMENT</span>
+                    <p>RIB Number: 9999 9999 9999</p>
+                  </div>
+                  <input
+                    type="radio"
+                    name="status"
+                    class="w-4 h-4 accent-current"
+                    onclick="toggleDetails(this)"
+                  />
+                </div>
+              </label>
+            </div>
 
-<div
-  id="payOnlinefrm"
-  class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-300 transform scale-y-0 origin-top hidden"
->
-  <h3 class="text-xl font-semibold mb-3 text-gray-300">Online Payment</h3>
-  <form id="onlinePaymentForm">
-    <div class="mb-4">
-      <label for="cardName" class="block text-sm font-medium text-gray-300">
-        Name on Card
-      </label>
-      <input
-        type="text"
-        id="cardName"
-        class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-        placeholder="Enter Name"
-      />
-    </div>
-    <div class="mb-4">
-      <label for="cardNumber" class="block text-sm font-medium text-gray-300">
-        Card Number
-      </label>
-      <input
-        type="text"
-        id="cardNumber"
-        class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-        placeholder="1234 5678 9101 1121"
-      />
-    </div>
-    <div class="mb-4 grid grid-cols-2 gap-4">
-      <div>
-        <label for="expiryDate" class="block text-sm font-medium text-gray-300">
-          Expiry Date
-        </label>
-        <input
-          type="text"
-          id="expiryDate"
-          class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-          placeholder="MM/YY"
-        />
-      </div>
-      <div>
-        <label for="cvv" class="block text-sm font-medium text-gray-300">
-          CVV
-        </label>
-        <input
-          type="text"
-          id="cvv"
-          class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-          placeholder="123"
-        />
-      </div>
-    </div>
-    <div class="text-center">
-      <button
-    type="submit"
-    class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500 mt-4">
-    Confirm Payment
-  </button>
-    </div>
-  </form>
-</div>
+            <!-- Receipt -->
+            <div class="text-center mt-4">
+              <input
+                type="file"
+                id="receiptFile"
+                class="block w-full text-sm text-gray-300 bg-[#1f1f1f] border-none rounded-md p-2 mb-4"
+                accept="image/*, .pdf"
+              />
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500 mt-4">
+                Confirm
+              </button>
+            </div>
+          </div>
+          
+          
 
-
-        
         <p id="paymentStatus" class="text-green-400 font-semibold mt-4 hidden">
           Payment Completed!
         </p>
@@ -299,80 +291,123 @@
           Generate QR Code
         </button></center>
       </section>
+
+
+      <!-- Teams section -->
       <section
         id="teamsSection"
         class="bg-[#0f0f0f] rounded-lg shadow-lg p-6 mb-6 hidden"
       >
         <h2 class="text-xl font-bold mb-4 uppercase text-gray-200 text-center ">Teams</h2>
         <center>
+          <div id="teamButtons">
+            <button id="createTeam" class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500 md:mr-4">
+              Create Team
+            </button>
+            <button id="joinTeam" class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500">
+              Join Team
+            </button>
+          </div>
+        </center>
         
-        <div id="teamButtons">
-          <button id="createTeam" class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500 md:mr-4">
-            Create Team
-          </button>
-          <button id="joinTeam" class="bg-black text-white px-3 md:px-4 py-1 md:py-2 rounded-full hover:bg-gray-500">
-            Join Team
-          </button>
-        </div></center>
-        <div
-    id="teamCreationForm"
-    class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-300 transform scale-y-0 origin-top hidden"
-  >
-    <h3 class="text-lg font-semibold text-gray-200 mb-3 text-center">
-      Create Your Team
-    </h3>
-    <form id="teamForm">
-      <div class="mb-4">
-        <label
-          for="teamName"
-          class="block text-base font-medium text-gray-300"
-        >
-          Team Name
-        </label>
-        <input
-          type="text"
-          id="teamName"
-          class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-          placeholder="Enter Team Name"
-        />
-      </div>
+        <!-- Create Team Form -->
+        <div id="teamCreationfrm" class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-300 transform scale-y-0 origin-top hidden">
+          <h3 class="text-lg font-semibold text-gray-200 mb-3 text-center">Create Your Team</h3>
+          <form id="teamForm">
+            <div class="mb-4">
+              <label for="teamName" class="block text-base font-medium text-gray-300">Team Name</label>
+              <input
+                type="text"
+                id="teamName"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="Enter Team Name"
+              />
+            </div>
+        
+            <div class="mb-4">
+              <label for="teamDescription" class="block text-base font-medium text-gray-300">Team Description</label>
+              <textarea
+                id="teamDescription"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="Describe your team..."
+              ></textarea>
+            </div>
+        
+            <div class="mb-2">
+              <label for="teamMembers" class="block text-base font-medium text-gray-300">Add Members</label>
+              <input
+                type="text"
+                id="teamMembers"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="example@example.com"
+              />
+            </div>
+            
+            <div class="mb-2">
+              <input
+                type="text"
+                id="teamMembers"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="example@example.com"
+              />
+            </div>
 
-      <div class="mb-4">
-        <label
-          for="teamDescription"
-          class="block text-base font-medium text-gray-300"
-        >
-          Team Description
-        </label>
-        <textarea
-          id="teamDescription"
-          class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-          placeholder="Describe your team..."
-        ></textarea>
-      </div>
-      <div class="mb-4">
-        <label
-          for="teamMembers"
-          class="block text-base font-medium text-gray-300"
-        >
-          Add Members
-        </label>
-        <input
-          type="text"
-          id="teamMembers"
-          class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
-          placeholder="example@example.com"
-        />
-      </div>
-      <div class="text-center">
-        <button
-          type="submit"
-          class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500" onclick="newTeam()">
-          Submit
-        </button>
-      </div>
-    </form>
-  </div>
+            <div class="mb-2">
+              <input
+                type="text"
+                id="teamMembers"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="example@example.com"
+              />
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500"
+                onclick="newTeam()"
+              >
+                Create
+              </button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Join Team Form -->
+        <div id="joinTeamfrm" class="mt-4 bg-[#1f1f1f] rounded-lg shadow-md p-4 transition-all duration-300 transform scale-y-0 origin-top hidden">
+          <h3 class="text-lg font-semibold text-gray-200 mb-3 text-center">Join an Existing Team</h3>
+          <form id="joinForm">
+            <div class="mb-4">
+              <label for="teamJoinCode" class="block text-base font-medium text-gray-300">Team Join Code</label>
+              <input
+                type="text"
+                id="teamJoinCode"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="Enter Team Join Code"
+              />
+            </div>
+        
+            <div class="mb-4">
+              <label for="teamJoinEmail" class="block text-base font-medium text-gray-300">Your Email</label>
+              <input
+                type="email"
+                id="teamJoinEmail"
+                class="w-full mt-1 bg-[#0f0f0f] text-gray-300 border-none rounded-lg px-3 py-2 focus:ring-2 focus:ring-gray-300 focus:outline-none"
+                placeholder="example@example.com"
+              />
+            </div>
+        
+            <div class="text-center">
+              <button
+                type="submit"
+                class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-500"
+                onclick="joinTeam()"
+              >
+                Join Team
+              </button>
+            </div>
+          </form>
+        </div>
+        
       </section>
     </main>
 
@@ -417,8 +452,7 @@
         event.preventDefault(); // Prevent default link behavior
         dropdown.classList.toggle("hidden"); // Toggle dropdown visibility
       });
-
-      // Close dropdown if clicked outside
+      
       window.addEventListener("click", (event) => {
         if (
           !profileLink.contains(event.target) &&
@@ -427,50 +461,87 @@
           dropdown.classList.add("hidden");
         }
       });
-      // Select the Create Team button and the hidden form
-      const createTeamButton = document.getElementById("createTeam");
-      const teamCreationForm = document.getElementById("teamCreationForm");
 
-      // Add event listener to the Create Team button
-      createTeamButton.addEventListener("click", () => {
-        // Toggle visibility and scale effect
-        if (teamCreationForm.classList.contains("hidden")) {
-          teamCreationForm.classList.remove("hidden", "scale-y-0");
-        } else {
-          teamCreationForm.classList.add("scale-y-0");
-          setTimeout(() => teamCreationForm.classList.add("hidden"), 300); 
-        }
-      });
-
-
-
+      // Payment
       const payInPersonbtn = document.getElementById("payInPersonbtn");
       const payOnlinebtn = document.getElementById("payOnlinebtn");
       const payInPersonfrm = document.getElementById("payInPersonfrm");
       const payOnlinefrm = document.getElementById("payOnlinefrm");
 
-      // Function to show or hide forms
+      let lastSelectedRadio = null; // Tracks the last selected radio button
+
       function toggleForm(selectedForm, otherForm) {
         if (selectedForm.classList.contains("hidden")) {
-          // Show the selected form
           selectedForm.classList.remove("hidden", "scale-y-0");
-          // Hide the other form immediately
-          otherForm.classList.add("scale-y-0", "hidden");
+          otherForm.classList.add("scale-y-0");
+          setTimeout(() => otherForm.classList.add("hidden"), 0);
         } else {
-          // Hide the selected form if it's already visible
-          selectedForm.classList.add("scale-y-0", "hidden");
+          selectedForm.classList.add("scale-y-0");
+          setTimeout(() => selectedForm.classList.add("hidden"), 0);
         }
       }
 
-      // Add event listener to the In-Person button
       payInPersonbtn.addEventListener("click", () => {
         toggleForm(payInPersonfrm, payOnlinefrm);
       });
 
-      // Add event listener to the Online button
       payOnlinebtn.addEventListener("click", () => {
         toggleForm(payOnlinefrm, payInPersonfrm);
       });
+
+      // Function to toggle details visibility in labels
+      function toggleDetails(radio) {
+        const allLabels = document.querySelectorAll("#payInPersonfrm label");
+
+        if (lastSelectedRadio === radio) {
+          radio.checked = false;
+          lastSelectedRadio = null;
+          allLabels.forEach((label) => {
+            label.querySelector(".details").classList.add("hidden");
+          });
+        } else {
+          lastSelectedRadio = radio;
+          allLabels.forEach((label) => {
+            const details = label.querySelector(".details");
+            if (label.contains(radio)) {
+              details.classList.remove("hidden");
+            } else {
+              details.classList.add("hidden");
+            }
+          });
+        }
+      }
+
+    // Teams
+      const createTeam = document.getElementById("createTeam");
+      const joinTeam = document.getElementById("joinTeam");
+      const teamCreationfrm = document.getElementById("teamCreationfrm");
+      const joinTeamfrm = document.getElementById("joinTeamfrm");
+      
+
+      function toggleForm(selectedForm, otherForm) {
+        if (selectedForm.classList.contains("hidden")) {
+          selectedForm.classList.remove("hidden", "scale-y-0");
+          otherForm.classList.add("scale-y-0");
+          setTimeout(() => otherForm.classList.add("hidden"), 0);
+        } else {
+          selectedForm.classList.add("scale-y-0");
+          setTimeout(() => selectedForm.classList.add("hidden"), 0);
+        }
+      }
+
+      createTeam.addEventListener("click", () => {
+        toggleForm(teamCreationfrm,  joinTeamfrm);
+      });
+
+      joinTeam.addEventListener("click", () => {
+        toggleForm(joinTeamfrm, teamCreationfrm);
+      });
+
+      
+
+
+
 
 
     </script>
